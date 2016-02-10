@@ -1,0 +1,77 @@
+@import 'settings';
+@import 'foundation';
+@include foundation-everything (true);
+
+$evidence-color: #ffed00 !default;
+$button-background-hover: scale-color($evidence-color, $lightness: -15%);
+
+$rosso-color: #FF0A0A !default;
+
+$ctaButton-header-color: $evidence-color !default;
+$ctaButton-radius: 30px !default;
+
+
+.title-container {
+    background: url("https://lh3.googleusercontent.com/RkRXOMT7jHnoTHY7VPh6vdgkVE9O0gEkVzhWrZyHV3Jin-29JzDwCZcPqzne3jTlUqYGDR1leNpfdvZv77U0PuMJTKobkLFFwSzEuFuDasweg6PcidMPeur8Kce93MyQ0tV88Ojwf4QTySyOSonF_Qc2rwVG98pmkbDHOhKclxh7888Me6d5owtU72MeAlegGTP0orjv70yUcTcAi7QqsUl1wcCigTJk7DmgYAuxhNCXih96SipzfNNDEw1ZhZM1JZE7Sd1U0-kW4EvO_niNTSii4iDzk-OJdHtW60655pc0dSlGI78uqHGOvGfOIPlA_a7eOkFWumzzB8WJBYZph323DYQbO4otE67Mis1pX9O8JLmBNOYCEXLVJzKcJG8vaehiynsg1vSKnRloVpJqHh1BnwvO57Atlz6PK_lKAejPVpAMR1EixEDT3tQ5Q-hH_sK6WYIPEFzh6eLWifRRcxzKz8iee2c-kxEYc3Hzik8UYDUPN8kC5D_KJr7Q2YXjb89laei0tl7o4jDKnXfxbtgpC1bjS5eaBIZLMn5DFhZKXyDkDFUkc4um8nQ0MzPzAgAXKA=w1175-h781-no") center no-repeat;
+    background-size: cover;
+    padding: 5%;
+    margin-bottom: 10px;
+
+    .title {
+        background-color: rgba(255,255,255,0.8);
+        text-align: center;
+        letter-spacing: 1px;
+        color: #000;
+        .big {
+            font-size: rem-calc(70, null);
+            text-transform: none;
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        .medium {
+            font-size: rem-calc(50, null);
+            text-transform: none;
+            font-weight: 100;
+            font-style: normal;
+        }
+    }
+}
+
+.banner {
+    text-align: center;
+    padding-top: rem-calc(10, null);
+    padding-bottom: rem-calc(10, null);
+    padding-left: rem-calc(20, null);
+    padding-right: rem-calc(20, null);
+
+    .sconto {
+        font-size: rem-calc(80, null);
+        font-weight: 700;
+        color: $rosso-color;
+        line-height: 5rem;
+    }
+
+    .subSconto {
+        font-size: rem-calc(40, null);
+        font-weight: 300;
+        line-height: 5rem;
+        color: #000000;
+    }
+}
+
+hr {
+    width: 99%;
+}
+
+.applicazioni h4 {
+    font-weight: 700;
+}
+
+.ctaButton {
+    @include button-style($evidence-color, $button-background-hover, #000000);
+    font-size: rem-calc(20, null);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+

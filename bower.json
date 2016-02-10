@@ -1,0 +1,19 @@
+{
+  "name": "defibrillatori-new",
+  "authors": [
+    "Lorenzo Caldara"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "source/bower_components",
+    "test",
+    "tests"
+  ]
+}
