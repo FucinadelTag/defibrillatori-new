@@ -1,15 +1,9 @@
-box: ruby:2.3.0
+box: ruby-2.3.0
 build:
     steps:
         # Execute the bundle install step, a step provided by wercker
         - bundle-install
         # Execute a custom script step.
-        - script:
-            name: bundle config build.nokogiri
-            code: bundle config build.nokogiri --use-system-libraries
-        - script:
-            name: bundle install
-            code: bundle install
         - script:
             name: middleman build
             code: bundle exec middleman build --verbose
