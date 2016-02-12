@@ -2,11 +2,10 @@
 @import 'foundation';
 @include foundation-everything (true);
 
+$numeroVerde-color: #008a2e !default;
 $evidence-color: #ffed00 !default;
 $button-background-hover: scale-color($evidence-color, $lightness: -15%);
-
 $rosso-color: #FF0A0A !default;
-
 $ctaButton-header-color: $evidence-color !default;
 $ctaButton-radius: 30px !default;
 
@@ -21,7 +20,7 @@ $ctaButton-radius: 30px !default;
         background-color: rgba(255,255,255,0.8);
         text-align: center;
         letter-spacing: 1px;
-        color: #000;
+        color: $body-font-color;
         .big {
             font-size: rem-calc(70, null);
             text-transform: none;
@@ -40,8 +39,8 @@ $ctaButton-radius: 30px !default;
 
 .banner {
     text-align: center;
-    padding-top: rem-calc(10, null);
-    padding-bottom: rem-calc(10, null);
+    padding-top: rem-calc(50, null);
+    padding-bottom: rem-calc(50, null);
     padding-left: rem-calc(20, null);
     padding-right: rem-calc(20, null);
 
@@ -60,12 +59,52 @@ $ctaButton-radius: 30px !default;
     }
 }
 
+.domande {
+    padding-top: 30px;
+    p, li {
+        font-size: 85%;
+        line-height: 1.9em;
+        letter-spacing: .5px;
+        font-weight: 300;
+        font-style: normal;
+        color: rgba(31,37,38,.75);
+
+    }
+
+    .callout {
+        margin-bottom: 1.5rem;
+    }
+
+    h5 {
+        margin-bottom: 10px;
+    }
+
+}
+
 hr {
     width: 99%;
 }
 
-.applicazioni h4 {
-    font-weight: 700;
+.applicazioni {
+
+    p, li {
+        font-size: 90%;
+        line-height: 1.6em;
+        letter-spacing: .4px;
+        font-weight: 300;
+        font-style: normal;
+
+    }
+
+    h4 {
+        font-weight: 700;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    img {
+        padding-bottom: 20px;
+    }
 }
 
 .ctaButton {
@@ -73,5 +112,52 @@ hr {
     font-size: rem-calc(20, null);
     text-transform: uppercase;
     letter-spacing: 2px;
+}
+
+.evidenza {
+    background-color: $evidence-color;
+    padding: rem-calc(20, null);
+    text-align: center;
+    margin-bottom: 1rem;
+
+    span {
+        text-transform: uppercase;
+        font-size: 32px;
+        line-height: 1.2em;
+        letter-spacing: 0px;
+        font-weight: 300;
+        font-style: normal;
+        color: $black;
+    }
+}
+
+.small {
+  font-size: rem-calc(13, null);
+}
+
+.box_nverde {
+    text-align: center;
+    line-height: 2.1875rem;
+}
+
+.numero-verde {
+    font-size: rem-calc(40, null);
+    color: #008a2e;
+}
+
+.center {
+    text-align: center;
+}
+
+.top-bar {
+    padding: 0rem;
+}
+
+.top-bar-right {
+    padding-top: 0.5rem;
+}
+
+.callout {
+    margin: 0rem;
 }
 
