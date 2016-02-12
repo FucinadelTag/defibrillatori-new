@@ -5,6 +5,12 @@ build:
         - bundle-install
         # Execute a custom script step.
         - script:
+            name: bundle config build.nokogiri
+            code: bundle config build.nokogiri --use-system-libraries
+        - script:
+            name: bundle install
+            code: bundle install
+        - script:
             name: middleman build
             code: bundle exec middleman build --verbose
 deploy:
