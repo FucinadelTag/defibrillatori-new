@@ -1,6 +1,8 @@
-box: ruby-2.3.0
+box: ruby:2.3.0
 build:
     steps:
+        bundle config build.nokogiri --use-system-libraries
+        bundle exec middleman prismic
         # Execute the bundle install step, a step provided by wercker
         - bundle-install
         # Execute a custom script step.
