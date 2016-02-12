@@ -4,6 +4,8 @@ source 'https://rubygems.org'
 
 ruby '2.3.0'
 
+gem "therubyracer"
+
 gem "middleman", ">4.0"
 
 # For faster file watcher updates on Windows:
