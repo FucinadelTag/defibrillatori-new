@@ -1,12 +1,18 @@
 ---
 # Warning: This file is auto-generated from the Prismic.io CMS. Local changes will overriden on next sync.
+layout: blog_post_layout
 title: >
         <%= @title %>
 
 date: <%= @date.strftime('%F') %>
 image: <%= @image %>
+fonte: <%= @fonte %>
 summary: >
         <%= @abstract %>
 ---
 
 <%= @body %>
+
+<p>
+    Fonte: <a href="<%= @fonte %>" target="_blank"><%= @fonte %></a>
+</p>

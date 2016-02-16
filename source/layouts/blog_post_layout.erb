@@ -1,20 +1,17 @@
 <% wrap_layout :master_layout do %>
 
-    <section class="title-container clearfix" style="background: url(<%= current_page.data.image %>) center no-repeat; background-size: cover;">
-        <div class="float-left">
-            <div class="row">
-                <div class="small-12 columns title">
-                    <h1>
-                        <%= current_page.data.title %><br class="show-for-large-up">
-                    </h1>
-                    <time><%= current_page.data.date.strftime('%b %e %Y') %></time>
-                    <p>
-                        <%= current_page.data.summary %>
-                    </p>
+    <section class="title-container blog" style="background: url(<%= current_page.data.image %>) center no-repeat; background-size: cover;">
+        <div class="row">
+            <div class="small-12 columns title">
+                <h1>
+                    <%= current_page.data.title %><br class="show-for-large-up">
+                </h1>
+                <time><%= current_page.data.date.strftime('%b %e %Y') %></time>
+                <p>
+                    <%= current_page.data.summary %>
+                </p>
 
-                </div>
             </div>
-
         </div>
     </section>
 

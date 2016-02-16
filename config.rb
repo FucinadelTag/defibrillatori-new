@@ -83,9 +83,19 @@ set :index_file, "index.html"
 
 activate :prismic_middleman do |f|
   f.url = 'https://philips-defibrillatori.prismic.io/api'
-  f.new_article_template = "fdt_templates/blog.tt"
-  f.permalink = '/blog/{category}/{year}-{month}-{day}-{title}.html'
-  f.default_extension = ".erb"
+
+  f.conf = {
+        'blog'=> {
+            'permalink'=> '/blog/{category}/{year}-{month}-{day}-{title}.html',
+            'default_extension'=> ".erb",
+            'template'=> "fdt_templates/blog.tt"
+        },
+        'news'=> {
+            'permalink'=> '/news/view/{title}.html',
+            'default_extension'=> ".erb",
+            'template'=> "fdt_templates/news.tt"
+        }
+    }
 end
 
 activate :podio_middleman do |f|
@@ -99,6 +109,7 @@ activate :podio_middleman do |f|
 end
 
 activate :blog do |blog|
+    blog.name = 'blog'
     blog.default_extension = ".erb"
 
     blog.tag_template = "tag.html"
@@ -117,6 +128,22 @@ activate :blog do |blog|
             template: '/category.html'
         }
     }
+end
+
+activate :blog do |blog|
+    blog.name = 'news'
+    blog.default_extension = ".erb"
+
+    blog.tag_template = "tag.html"
+    blog.calendar_template = "calendar.html"
+    blog.sources = "/news/view/{title}.html"
+    blog.permalink = "/blog/view/{title}.html"
+
+    # Enable pagination
+    blog.paginate = true
+    blog.per_page = 10
+    blog.page_link = "page/{num}"
+
 end
 
 # Build-specific configuration
