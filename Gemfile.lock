@@ -1,4 +1,14 @@
 GIT
+  remote: git://github.com/FucinadelTag/FdtGems
+  revision: 0e64192f7aba3443bb29a4c49f24bd9e854a2815
+  branch: 1.0
+  specs:
+    podio_middleman (0.0.1)
+      middleman-core (>= 3.3.2)
+    prismic_middleman (0.0.1)
+      middleman-core (>= 3.3.2)
+
+GIT
   remote: git://github.com/podio/podio-rb
   revision: e69fb45c2ca7c9002f23f77f7c4361f51ea754e0
   specs:
@@ -16,14 +26,6 @@ GIT
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 3.0)
       netrc (~> 0.8)
-
-PATH
-  remote: ../FdtGems/
-  specs:
-    podio_middleman (0.0.1)
-      middleman-core (>= 3.3.2)
-    prismic_middleman (0.0.1)
-      middleman-core (>= 3.3.2)
 
 GEM
   remote: https://rubygems.org/
