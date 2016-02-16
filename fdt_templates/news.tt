@@ -1,0 +1,12 @@
+---
+# Warning: This file is auto-generated from the Prismic.io CMS. Local changes will overriden on next sync.
+title: >
+        <%= @title %>
+
+date: <%= @date.strftime('%F') %>
+image: <%= @image %>
+summary: >
+        <%= @abstract %>
+---
+
+<%= @body %>

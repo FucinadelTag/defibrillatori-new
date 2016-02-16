@@ -1,0 +1,57 @@
+---
+layout: blog_home_layout
+title: Defibrillatore Philips - Puoi Salvare una Vita!
+description: Defibrillatori Philips sono incredibilmente semplici ed Intuitivi, Scegli il DAE Semiautomatico più adatto alla Tua Attività. Scrivici ora per Maggiori Informazioni!
+testata:
+    prima_riga: Come scegliere
+    seconda_riga: Alcuni consigli
+immagineTestata: https://lh3.googleusercontent.com/RkRXOMT7jHnoTHY7VPh6vdgkVE9O0gEkVzhWrZyHV3Jin-29JzDwCZcPqzne3jTlUqYGDR1leNpfdvZv77U0PuMJTKobkLFFwSzEuFuDasweg6PcidMPeur8Kce93MyQ0tV88Ojwf4QTySyOSonF_Qc2rwVG98pmkbDHOhKclxh7888Me6d5owtU72MeAlegGTP0orjv70yUcTcAi7QqsUl1wcCigTJk7DmgYAuxhNCXih96SipzfNNDEw1ZhZM1JZE7Sd1U0-kW4EvO_niNTSii4iDzk-OJdHtW60655pc0dSlGI78uqHGOvGfOIPlA_a7eOkFWumzzB8WJBYZph323DYQbO4otE67Mis1pX9O8JLmBNOYCEXLVJzKcJG8vaehiynsg1vSKnRloVpJqHh1BnwvO57Atlz6PK_lKAejPVpAMR1EixEDT3tQ5Q-hH_sK6WYIPEFzh6eLWifRRcxzKz8iee2c-kxEYc3Hzik8UYDUPN8kC5D_KJr7Q2YXjb89laei0tl7o4jDKnXfxbtgpC1bjS5eaBIZLMn5DFhZKXyDkDFUkc4um8nQ0MzPzAgAXKA=w1175-h781-no
+
+---
+
+<% blog.articles[0...1].each do |article| %>
+    <section class="title-container clearfix" style="background: url(<%= article.data.image %>) center no-repeat; background-size: cover;">
+        <div class="float-left">
+            <div class="row">
+                <div class="small-12 columns title">
+                    <h1>
+                        <a href="<%= article.url %>">
+                            <%= article.title %><br class="show-for-large-up">
+                        </a>
+                    </h1>
+                    <time><%= article.date.strftime('%b %e %Y') %></time>
+                    <p>
+                        <%= article.data.summary %> | <a href="<%= article.url %>">Leggi tutto</a>
+                    </p>
+
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+<% end %>
+<div class="row">
+
+    <div class="small-10 columns">
+        <div class="row align-stretch">
+            <% blog.articles[1...50].each do |article| %>
+                <div class="small-6 columns">
+                  <article>
+                    <% link_to article do %>
+                        <%= tag :img, :src => article.data.image, :title => article.title %>
+                    <% end %>
+
+                    <h3>
+                      <a href="<%= article.url %>"><%= article.title %></a>
+                    </h3>
+                    <time><%= article.date.strftime('%b %e %Y') %></time>
+                    <p><%= article.data.summary %></p>
+                    <a href="<%= article.url %>">Leggi tutto</a>
+                  </article>
+                </div>
+            <% end %>
+        </div>
+    </div>
+    <%= partial "partials/aside" %>
+</div>

@@ -1,0 +1,47 @@
+---
+layout: master_layout
+pageable: true
+per_page: 12
+showForm: main
+---
+
+<div class="row blog">
+
+    <div class="small-10 columns">
+
+        <h3>Elenco articoli: <strong><%= tagname %></strong></h3>
+
+        <% if paginate && num_pages > 1 %>
+            <p>Page <%= page_number %> of <%= num_pages %></p>
+
+            <% if prev_page %>
+                <p><%= link_to 'Previous page', prev_page %></p>
+            <% end %>
+        <% end %>
+
+        <hr>
+
+        <div class="row align-stretch">
+            <% page_articles.each_with_index do |article, i| %>
+                <div class="small-6 columns">
+                  <article>
+                    <% link_to article do %>
+                        <%= tag :img, :src => article.data.image, :title => article.title %>
+                    <% end %>
+
+                    <h3>
+                      <a href="<%= article.url %>"><%= article.title %></a>
+                    </h3>
+                    <time><%= article.date.strftime('%b %e %Y') %></time>
+                    <p><%= article.data.summary %></p>
+                    <a href="<%= article.url %>">Read more</a>
+                  </article>
+                </div>
+            <% end %>
+        </div>
+
+    </div>
+
+    <%= partial "partials/aside" %>
+
+</div>

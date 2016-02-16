@@ -1,0 +1,143 @@
+---
+title: Defibrillatore Philips - Puoi Salvare una Vita!
+description: Defibrillatori Philips sono incredibilmente semplici ed Intuitivi, Scegli il DAE Semiautomatico più adatto alla Tua Attività. Scrivici ora per Maggiori Informazioni!
+testata:
+    prima_riga: >
+        Consumabili: vendita online
+    seconda_riga: Acquista online in tutta sicurezza
+    hasButton: 0
+immagineTestata: https://lh3.googleusercontent.com/RkRXOMT7jHnoTHY7VPh6vdgkVE9O0gEkVzhWrZyHV3Jin-29JzDwCZcPqzne3jTlUqYGDR1leNpfdvZv77U0PuMJTKobkLFFwSzEuFuDasweg6PcidMPeur8Kce93MyQ0tV88Ojwf4QTySyOSonF_Qc2rwVG98pmkbDHOhKclxh7888Me6d5owtU72MeAlegGTP0orjv70yUcTcAi7QqsUl1wcCigTJk7DmgYAuxhNCXih96SipzfNNDEw1ZhZM1JZE7Sd1U0-kW4EvO_niNTSii4iDzk-OJdHtW60655pc0dSlGI78uqHGOvGfOIPlA_a7eOkFWumzzB8WJBYZph323DYQbO4otE67Mis1pX9O8JLmBNOYCEXLVJzKcJG8vaehiynsg1vSKnRloVpJqHh1BnwvO57Atlz6PK_lKAejPVpAMR1EixEDT3tQ5Q-hH_sK6WYIPEFzh6eLWifRRcxzKz8iee2c-kxEYc3Hzik8UYDUPN8kC5D_KJr7Q2YXjb89laei0tl7o4jDKnXfxbtgpC1bjS5eaBIZLMn5DFhZKXyDkDFUkc4um8nQ0MzPzAgAXKA=w1175-h781-no
+
+conversionCode: >
+                    <!-- FOXYCART -->
+                    <script src="//cdn.foxycart.com/defibrillatori-online/loader.js" async defer></script>
+                    <!-- /FOXYCART -->
+
+
+---
+
+<%
+    #data = sitemap.find_resource_by_path('^store/consumabili/*').children
+
+
+    #data = sitemap.resources.select{ |r| r.path.start_with?('/store/consumabili/') }
+
+    #puts data
+
+    #data = sitemap.where(:categoria.include => "COnsumabili").order_by(:price)
+
+    hash = Hash.new
+
+    sitemap.resources.select{ |r| r.path.start_with?('store/consumabili/') }.sort_by { |prodotto| prodotto.data.price }.each { |prodotto|
+
+        hashprodotto = Hash.new
+
+        puts prodotto
+
+
+
+        hashprodotto[prodotto.data.codice]  = prodotto
+
+         prodotto.data.per_il_modello.each { |modello|
+
+            if hash.has_key?(modello)
+                hash[modello].merge! (hashprodotto)
+            else
+                hash[modello] = hashprodotto
+            end
+
+
+        }
+        hash.to_a.reverse
+    }
+
+%>
+
+    <div class="row">
+        <div class="small-8 columns">
+
+            <ul id="menu" class="menu">
+                <li>Modelli:</li>
+                <% hash.to_a.reverse.each do |key, gruppo| %>
+                    <li><a href="#<%= key %>"><%= key %></a></li>
+                <% end %>
+            </ul>
+        </div>
+        <div class="small-4 columns">
+            <p data-fc-id="minicart">
+                <i class="fa fa-shopping-cart"></i>
+                <a href="https://defibrillatori-online-new.foxycart.com/cart?cart=view">
+                    <span data-fc-id="minicart-quantity">0</span>
+                    <span data-fc-id="minicart-singular"> prodtto </span>
+                    <span data-fc-id="minicart-plural"> prodotti </span>
+                    nel carrello | &euro;
+                    <span data-fc-id="minicart-order-total">0</span>
+                </a>
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="large-12 columns">
+            <% hash.to_a.reverse.each do |key, gruppo| %>
+                <hr>
+                <h2 id="<%= key %>">Consumabili modello: <%= key %> <a href="#menu"><i class="fa fa-arrow-up"></i> </a></h2>
+                <hr>
+                    <div class="row align-stretch">
+
+
+                        <% gruppo.each do |codice, prodotto| %>
+                        <div class="small-12 columns prodotto">
+                            <div class="row">
+                                <div class="large-12 columns">
+                                    <h4 class="subheader"><%= prodotto.data.title %></h4>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="large-4 columns">
+                                    <img src="<%= prodotto.data.immagine %>" class="padding" alt="<%= prodotto.data.title %>" />
+                                </div>
+                                <div class="large-8 columns">
+                                    <div class="row">
+                                        <div class="large-6 columns">
+                                            <span class="prezzo" ><%= number_to_currency(prodotto.data.price, :unit => "&euro;", :separator => ",", :delimiter => ".") %> + IVA</span>
+                                            <br /><i class="less_important"> (<%= number_to_currency(prodotto.data.prezzo_con_iva, :unit => "&euro;", :separator => ",", :delimiter => ".") %> IVA inclusa)</i>
+                                            <br />
+                                            <span class="less_important" >Codice Prodotto: <%= prodotto.data.codice %></span>
+                                        </div>
+
+                                        <div class="large-6 columns">
+
+                                    <!-- form example -->
+                                        <form action="https://defibrillatori-online-new.foxycart.com/cart" method="post" accept-charset="utf-8">
+                                        <input type="hidden" name="name" value="<%= prodotto.data.title %>" />
+                                        <input type="hidden" name="price" value="<%= prodotto.data.price %>" />
+                                        <input type="hidden" name="code" value="<%= prodotto.data.codice %>" />
+                                        <input type="hidden" name="image" value="<%= prodotto.data.immagine %>" />
+                                        <!-- <input type="hidden" name="category" value="<%= prodotto.data.categoria.downcase %>" /> -->
+                                        <input type="submit" value="Acquista Subito" class="button" />
+                                        </form>
+
+                                        </div>
+                                    </div>
+
+                                    <hr />
+                                     <div class="row">
+                                        <div class="large-12 columns">
+                                            <%= prodotto.data.description %>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <% end %>
+                    </div>
+            <% end %>
+        </div>
+    </div>
+
+
+
+</div>

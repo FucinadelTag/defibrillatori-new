@@ -1,25 +1,28 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
+<% wrap_layout :master_layout do %>
 
-    <!-- Always force latest IE rendering engine or request Chrome Frame -->
-    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <section class="title-container clearfix" style="background: url(<%= current_page.data.immagineTestata %>) center no-repeat; background-size: cover;">
+        <div class="float-center">
+            <div class="row">
+                <div class="small-12 columns title">
+                    <span class="big">
+                        <%= current_page.data.testata.prima_riga || "Defibrillatore Philips" %><br class="show-for-large-up">
+                    </span>
+                    <span class="medium">
+                        <%= current_page.data.testata.seconda_riga || "Il più venduto al mondo" %><br />
+                    </span>
 
-    <!-- Use title if it's in the page YAML frontmatter -->
-    <title><%= current_page.data.title || "The Middleman" %></title>
+                    <% if current_page.data.testata.hasButton != 0  %>
+                        <span>
+                            <%= partial "partials/callToAction" %>
+                        </span>
+                    <% end %>
+                </div>
+            </div>
 
-    <%= stylesheet_link_tag "all" %>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        </div>
+    </section>
 
-  </head>
-
-  <body class="<%= page_classes %>">
     <%= yield %>
 
-    <%= javascript_include_tag  "all" %>
 
-  </body>
-
-</html>
+<% end %>

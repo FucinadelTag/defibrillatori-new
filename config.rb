@@ -16,7 +16,7 @@ compass_config do |config|
 end
 
 # Reload the browser automatically whenever files change
-activate :livereload
+# activate :livereload
 
 # Add bower's directory to sprockets asset path
 after_configuration do
@@ -77,6 +77,47 @@ set :images_dir, 'images'
 
 set :partials_dir, 'partials'
 
+activate :directory_indexes
+
+set :index_file, "index.html"
+
+activate :prismic_middleman do |f|
+  f.url = 'https://philips-defibrillatori.prismic.io/api'
+  f.new_article_template = "fdt_templates/blog.tt"
+  f.permalink = '/blog/{category}/{year}-{month}-{day}-{title}.html'
+  f.default_extension = ".erb"
+end
+
+activate :podio_middleman do |f|
+  f.podio_api_key = 'runscope'
+  f.podio_api_secret = 'D3FrXAJWyuyNY0A7uA2WYFRvnT9IcweKpTXsdgmRn1Rot5iOZ5XX17KarPUoqJTO'
+  f.podio_app_id = '9325823'
+  f.podio_app_token = '7cf9678005ab4dc7977677d289ec134a'
+  f.podio_views = {'consumabili'=>'22962502'}
+  f.podio_templates = {'consumabili'=>'prodotti'}
+  f.podio_fields_to_get = {'consumabili'=>['Nome Prodotto', 'Prezzo', 'Descrizione', 'Immagine', 'Stato', 'Per il modello', 'Categoria', 'Codice Prodotto Iredeem', 'Prezzo con IVA']}
+end
+
+activate :blog do |blog|
+    blog.default_extension = ".erb"
+
+    blog.tag_template = "tag.html"
+    blog.calendar_template = "calendar.html"
+    blog.sources = "/blog/{category}/{year}-{month}-{day}-{title}.html"
+    blog.permalink = "/blog/{category}/{year}-{month}-{day}-{title}.html"
+
+    # Enable pagination
+    blog.paginate = true
+    blog.per_page = 10
+    blog.page_link = "page/{num}"
+
+    blog.custom_collections = {
+        category: {
+            link: '/blog/categories/{category}.html',
+            template: '/category.html'
+        }
+    }
+end
 
 # Build-specific configuration
 configure :build do

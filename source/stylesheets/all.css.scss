@@ -11,7 +11,6 @@ $ctaButton-radius: 30px !default;
 
 
 .title-container {
-    background: url("https://lh3.googleusercontent.com/RkRXOMT7jHnoTHY7VPh6vdgkVE9O0gEkVzhWrZyHV3Jin-29JzDwCZcPqzne3jTlUqYGDR1leNpfdvZv77U0PuMJTKobkLFFwSzEuFuDasweg6PcidMPeur8Kce93MyQ0tV88Ojwf4QTySyOSonF_Qc2rwVG98pmkbDHOhKclxh7888Me6d5owtU72MeAlegGTP0orjv70yUcTcAi7QqsUl1wcCigTJk7DmgYAuxhNCXih96SipzfNNDEw1ZhZM1JZE7Sd1U0-kW4EvO_niNTSii4iDzk-OJdHtW60655pc0dSlGI78uqHGOvGfOIPlA_a7eOkFWumzzB8WJBYZph323DYQbO4otE67Mis1pX9O8JLmBNOYCEXLVJzKcJG8vaehiynsg1vSKnRloVpJqHh1BnwvO57Atlz6PK_lKAejPVpAMR1EixEDT3tQ5Q-hH_sK6WYIPEFzh6eLWifRRcxzKz8iee2c-kxEYc3Hzik8UYDUPN8kC5D_KJr7Q2YXjb89laei0tl7o4jDKnXfxbtgpC1bjS5eaBIZLMn5DFhZKXyDkDFUkc4um8nQ0MzPzAgAXKA=w1175-h781-no") center no-repeat;
     background-size: cover;
     padding: 5%;
     margin-bottom: 10px;
@@ -34,6 +33,31 @@ $ctaButton-radius: 30px !default;
             font-weight: 100;
             font-style: normal;
         }
+    }
+}
+
+.blog {
+
+    letter-spacing: 1px;
+
+    .title-container {
+        margin-bottom: rem-calc(35px);
+    }
+
+    .title {
+        background-color: rgba(255,255,255,0.8);
+        color: $body-font-color;
+        text-align: left;
+    }
+
+    time {
+        margin-bottom: rem-calc(10px);
+        font-size: 80%;
+        font-style: italic;
+    }
+
+    article {
+        padding-bottom: rem-calc(50, null);
     }
 }
 
@@ -149,15 +173,49 @@ hr {
     text-align: center;
 }
 
+.menu-text {
+
+    padding: 0rem 0rem;
+}
+
 .top-bar {
     padding: 0rem;
 }
 
 .top-bar-right {
-    padding-top: 0.5rem;
+    padding-top: 0.8rem;
 }
 
 .callout {
     margin: 0rem;
 }
+
+.comescegliere {
+
+    .callout {
+        margin-bottom: 20px;
+    }
+
+    p {
+        margin-bottom: 50px;
+    }
+}
+
+.prodotto {
+
+    padding-bottom: 50px;
+
+    .less_important {
+        font-size: 80%;
+        font-style: italic;
+    }
+
+    .prezzo {
+        font-size: 1.875rem;
+        color: #ff2424;
+        padding: 0.3125rem;
+    }
+}
+
+
 

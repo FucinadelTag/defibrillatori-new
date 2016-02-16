@@ -1,0 +1,13 @@
+<!-- Sidebar -->
+
+<aside class="small-2 columns">
+
+
+    <h5>Tag</h5>
+    <div class="row">
+        <% blog.tags.each do |tag, articles| %>
+            <div class="small-12 columns small"><%= link_to tag+' ('+articles.size.to_s+')', tag_path(tag) %></div>
+         <% end %>
+    </div>
+
+</aside>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title><%= current_page.data.title || "Defibrillatore Philips - Puoi Salvare una Vita!" %></title>
+
+    <meta name="description" content="<%= current_page.data.description || "Defibrillatori Philips sono incredibilmente semplici ed Intuitivi, Scegli il DAE Semiautomatico più adatto alla Tua Attività. Scrivici ora per Maggiori Informazioni!" %>" />
+
+    <%= stylesheet_link_tag "all" %>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  </head>
+
+    <body class="<%= page_classes %>">
+
+        <div class="top-bar">
+            <div class="top-bar-left">
+                <ul class="menu">
+                    <li class="menu-text"><a href="/"><img src="https://lh3.googleusercontent.com/-g4HJf2yMKsE/U02kMhfilgI/AAAAAAAAl0E/KJAx2bDXdTk/w150-h44-no/logo_piccolo.png"></a></li>
+                    <li><a href="/store/">Vendita Consumabili</a></li>
+                    <li><a href="/blog/">Blog</a></li>
+                    <li><a href="/news/">Notizie</a></li>
+                </ul>
+            </div>
+            <div class="top-bar-right">
+                <ul class="menu">
+                    <li><a href="#">Corsi</a></li>
+                    <li><%= link_to 'Come scegliere', '/come-scegliere-un-defibrillatore' %></li>
+                </ul>
+            </div>
+        </div>
+
+        <%= yield %>
+
+        <%= partial "partials/footer" %>
+
+        <%= javascript_include_tag  "all" %>
+
+        <% if current_page.data.conversionCode  %>
+            <%= current_page.data.conversionCode %>
+        <% end %>
+
+  </body>
+
+</html>
