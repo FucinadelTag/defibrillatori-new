@@ -18,17 +18,19 @@ $ctaButton-radius: 30px !default;
     .title {
         background-color: rgba(255,255,255,0.8);
         text-align: center;
+        padding-left: 20px;
+        padding-right: 20px;
         letter-spacing: 1px;
         color: $body-font-color;
         .big {
-            font-size: rem-calc(70, null);
+            font-size: 5vw;
             text-transform: none;
             font-weight: 700;
             font-style: normal;
         }
 
         .medium {
-            font-size: rem-calc(50, null);
+            font-size: 3vw;
             text-transform: none;
             font-weight: 100;
             font-style: normal;
@@ -107,6 +109,15 @@ $ctaButton-radius: 30px !default;
 
 hr {
     width: 99%;
+}
+
+footer {
+    font-size: 90%;
+    line-height: 1.6em;
+    letter-spacing: .4px;
+    font-weight: 300;
+    font-style: normal;
+
 }
 
 .applicazioni {
@@ -217,5 +228,11 @@ hr {
     }
 }
 
+
+.didascalia {
+    font-size: 0.8125rem;
+    font-style: italic;
+    color: #6f6f6f;
+}
 
 

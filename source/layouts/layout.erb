@@ -1,14 +1,13 @@
 <% wrap_layout :master_layout do %>
 
-    <section class="title-container clearfix" style="background: url(<%= current_page.data.immagineTestata %>) center no-repeat; background-size: cover;">
-        <div class="float-center">
-            <div class="row">
-                <div class="small-12 columns title">
-                    <span class="big">
+    <section class="title-container" style="background: url(<%= current_page.data.immagineTestata %>) center no-repeat; background-size: cover;">
+            <div class="row clearfix">
+                <div class="title float-center">
+                    <h1 class="big">
                         <% if current_page.data.testata.prima_riga != ''  %>
                             <%= current_page.data.testata.prima_riga %><br class="show-for-large-up">
                         <% end %>
-                    </span>
+                    </h1>
                     <span class="medium">
                         <% if current_page.data.testata.seconda_riga != ''  %>
                             <%= current_page.data.testata.seconda_riga %><br />
@@ -22,8 +21,6 @@
                     <% end %>
                 </div>
             </div>
-
-        </div>
     </section>
 
     <%= yield %>
