@@ -5,10 +5,14 @@
             <div class="row">
                 <div class="small-12 columns title">
                     <span class="big">
-                        <%= current_page.data.testata.prima_riga || "Defibrillatore Philips" %><br class="show-for-large-up">
+                        <% if current_page.data.testata.prima_riga != ''  %>
+                            <%= current_page.data.testata.prima_riga %><br class="show-for-large-up">
+                        <% end %>
                     </span>
                     <span class="medium">
-                        <%= current_page.data.testata.seconda_riga || "Il più venduto al mondo" %><br />
+                        <% if current_page.data.testata.seconda_riga != ''  %>
+                            <%= current_page.data.testata.seconda_riga %><br />
+                        <% end %>
                     </span>
 
                     <% if current_page.data.testata.hasButton != 0  %>
