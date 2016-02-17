@@ -15,6 +15,9 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+
     <% if current_page.data.headCode  %>
         <%= current_page.data.headCode %>
     <% end %>
@@ -75,12 +78,12 @@
             <div class="top-bar-left">
                 <ul class="menu">
                     <li class="menu-text"><a href="/"><img src="https://lh3.googleusercontent.com/-g4HJf2yMKsE/U02kMhfilgI/AAAAAAAAl0E/KJAx2bDXdTk/w150-h44-no/logo_piccolo.png"></a></li>
-                    <li><a href="/store/">Vendita Consumabili</a></li>
+                    <li class="show-for-medium"><a href="/store/">Vendita<span class="show-for-large"> Consumabili</span></a></li>
                     <li><a href="/blog/">Blog</a></li>
                     <li><a href="/news/">Notizie</a></li>
                 </ul>
             </div>
-            <div class="top-bar-right">
+            <div class="top-bar-right show-for-large">
                 <ul class="menu">
                     <li><%= link_to 'Corsi abilitazione', '/abilitarsi-alluso' %></li>
                     <li><%= link_to 'Come scegliere', '/come-scegliere-un-defibrillatore' %></li>
@@ -131,9 +134,6 @@
         <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/983718396/?value=0&amp;guid=ON&amp;script=0"/>
         </div>
         </noscript>
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-        <script src="http://cdn.fucinadeltag.it.s3-website-eu-west-1.amazonaws.com/moment.js"></script>
 
         <%= javascript_include_tag  "all" %>
 

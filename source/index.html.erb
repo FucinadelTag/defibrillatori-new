@@ -6,6 +6,16 @@ testata:
     seconda_riga: Il più venduto al mondo
 immagineTestata: https://prismic-io.s3.amazonaws.com/philips-defibrillatori/4f523e7284d5c7e7a0f10741793f17f9a3808759_dae-grande-2.png
 
+conversionCode: >
+                    <!-- MOMENT -->
+                    <script src="http://cdn.fucinadeltag.it.s3-website-eu-west-1.amazonaws.com/moment.js"></script>
+                    <script type="text/javascript">
+                        moment.locale('it');
+                        var lastDayOfMonth = moment().endOf('month').format("D\ MMMM YYYY");
+                        $(".dataPromo").html(lastDayOfMonth);
+                    </script>
+                    <!-- /MOMENT -->
+
 ---
 
 <div class="row banner">
@@ -21,7 +31,7 @@ immagineTestata: https://prismic-io.s3.amazonaws.com/philips-defibrillatori/4f52
 <section class="applicazioni domande">
 
     <div class="row align-stretch ">
-            <div class="columns">
+            <div class="small-12 medium-12 large-6 columns">
                     <h4>Società sportive</h4>
                     <img src="https://prismic-io.s3.amazonaws.com/philips-defibrillatori/919ebeee2c1efbc7e9e6de7755b5b8e3c83a9c9c_calcio.jpg" />
 
@@ -46,7 +56,7 @@ immagineTestata: https://prismic-io.s3.amazonaws.com/philips-defibrillatori/4f52
                     </p>
 
             </div>
-            <div class="columns">
+            <div class="small-12 medium-12 large-6 columns">
                     <h4>Amministrazioni Pubbliche</h4>
                     <img src="https://prismic-io.s3.amazonaws.com/philips-defibrillatori/8a03b289cee6c2ecd3638882bbafcfecfeb408e8_cf005739.jpg" />
 
@@ -77,7 +87,7 @@ immagineTestata: https://prismic-io.s3.amazonaws.com/philips-defibrillatori/4f52
     <%= partial "partials/rowCallToAction" %>
 
     <div class="row align-stretch">
-            <div class="columns">
+            <div class="small-12 medium-12 large-6 columns columns">
                     <h4>Aziende</h4>
                     <img src="https://prismic-io.s3.amazonaws.com/philips-defibrillatori/121591cdf2646d185980abeae004d91730f1140c_ecs0708-dl080731_fr3_0423.jpg" />
                     <p class="callout">
@@ -98,7 +108,7 @@ immagineTestata: https://prismic-io.s3.amazonaws.com/philips-defibrillatori/4f52
 
 
             </div>
-            <div class="columns">
+            <div class="small-12 medium-12 large-6 columns columns">
                 <h4>Soccorritori</h4>
                 <img src="https://prismic-io.s3.amazonaws.com/philips-defibrillatori/4da338f1271dc84f7f6e54e338111dd516dcab1e_fpp9213.jpg" />
                 <p  class="callout">
@@ -123,7 +133,7 @@ immagineTestata: https://prismic-io.s3.amazonaws.com/philips-defibrillatori/4f52
     <%= partial "partials/rowCallToAction" %>
 
     <div class="row align-stretch">
-            <div class="columns">
+            <div class="small-12 medium-12 large-6 columns columns">
                     <h4>Condomini</h4>
                     <img src="https://prismic-io.s3.amazonaws.com/philips-defibrillatori/6badcedce2e28a86a0368dac4f0620228949f27a_condominio.jpg" />
                     <p  class="callout">
@@ -144,7 +154,7 @@ immagineTestata: https://prismic-io.s3.amazonaws.com/philips-defibrillatori/4f52
 
 
             </div>
-            <div class="columns">
+            <div class="small-12 medium-12 large-6 columns columns">
                     <h4>Privati cittadini</h4>
                     <img src="https://prismic-io.s3.amazonaws.com/philips-defibrillatori/e36f509014e292ef015266cb6cb22c50d9ff878e_b_fpx0033.jpg" />
                     <p  class="callout">
@@ -171,10 +181,12 @@ immagineTestata: https://prismic-io.s3.amazonaws.com/philips-defibrillatori/4f52
 <%= partial "partials/form" %>
 <hr>
 <div class="row">
-    <h2>Le risposte alle vostre domande</h2>
+    <div class="columns">
+        <h2>Le risposte alle vostre domande</h2>
+    </div>
 </div>
 <div class="row align-stretch domande">
-    <div class="columns">
+    <div class="small-12 medium-12 large-4 columns">
         <h5>Chi può usare il defibrillatore?</h5>
         <p>
             Per essere usato <strong>non necessita di personale medico</strong>. Chiunque con un corso di appena 5 ore può usare il defibrillatore.
@@ -182,14 +194,14 @@ immagineTestata: https://prismic-io.s3.amazonaws.com/philips-defibrillatori/4f52
             Se acquisti un defibrillatore Philips <strong>possiamo organizzare noi i corsi presso la tua struttura</strong> o aiutarti a scegliere la soluzione migliore.
         </p>
     </div>
-    <div class="columns">
+    <div class="small-12 medium-12 large-4 columns">
         <h5>Di chi è la responsabilità in caso di decesso?</h5>
         <p>
             <strong>La resposabilità è del defibrillatore.</strong>
             Se il paziente non necessita di scarica, <strong>il defibrillatore non la eroga.</strong><br>Nessuna possibilità di errore!
         </p>
     </div>
-    <div class="columns">
+    <div class="small-12 medium-12 large-4 columns">
         <h5>E' facile da usare?</h5>
         <p>
             <strong>Il defibrillatore Philips ti guida con la voce</strong>. Nulla da leggere o da interpretare.
@@ -199,19 +211,19 @@ immagineTestata: https://prismic-io.s3.amazonaws.com/philips-defibrillatori/4f52
 </div>
 
 <div class="row align-stretch domande">
-    <div class="columns">
+    <div class="small-12 medium-12 large-4 columns">
         <h5>Può essere usato sui bambini?</h5>
         <p>
             Il defibrillatore Philips ha in dotazione <strong>un'unica coppia di elettrodi</strong> validi sia per adulti che per bambini, grazie all'ausilio di una semplice chiavetta pediatrica.
         </p>
     </div>
-    <div class="columns">
+    <div class="small-12 medium-12 large-4 columns">
         <h5>Come mi accorgo se non funziona?</h5>
         <p>
             Un test automatico verifica il defibrillatore e lo mantiene <strong>pronto all’uso</strong>. Il defibrillatore è in grado di capire se c'è qualche malfunzionamento e di segnalarlo.
         </p>
     </div>
-    <div class="columns">
+    <div class="small-12 medium-12 large-4 columns">
         <h5>Necessita di energia elettrica?</h5>
         <p>
             Il Defibrillatore Philips funziona in completa autonomia.
@@ -220,7 +232,7 @@ immagineTestata: https://prismic-io.s3.amazonaws.com/philips-defibrillatori/4f52
     </div>
 </div>
 <div class="row align-stretch domande">
-    <div class="columns">
+    <div class="small-12 medium-12 large-4 columns">
         <h5>Di quale manutenzione ha bisogno?</h5>
         <p>
             <ul class="subheader">
@@ -229,7 +241,7 @@ immagineTestata: https://prismic-io.s3.amazonaws.com/philips-defibrillatori/4f52
             </ul>
         </p>
     </div>
-    <div class="columns">
+    <div class="small-12 medium-12 large-4 columns">
         <h5>Quanto costano le parti consumabili?</h5>
         <p>
             <ul class="subheader">
@@ -239,7 +251,7 @@ immagineTestata: https://prismic-io.s3.amazonaws.com/philips-defibrillatori/4f52
             </ul>
         </p>
     </div>
-    <div class="columns">
+    <div class="small-12 medium-12 large-4 columns">
         <h5>Cosa fare dopo l'utilizzo?</h5>
         <p>
             Durante l'utilizzo, il defibrillatore registra tutti gli eventi. I dati verranno poi scaricati e trasmessi alla centrale operativa 118. <strong>Un nostro tecnico sarà a disposizione per assisterti in questi momenti senza nessun costo aggiuntivo</strong>.
@@ -251,13 +263,13 @@ immagineTestata: https://prismic-io.s3.amazonaws.com/philips-defibrillatori/4f52
 
 <hr>
 <div class="row">
-    <div class="columns">
+    <div class="small-12 medium-12 large-6 columns">
         <h4 class="subheader">L'uso del defibrillatore su un adulto</h4>
         <div class="flex-video widescreen">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/YDjkkgblBjM?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
         </div>
     </div>
-    <div class="columns">
+    <div class="small-12 medium-12 large-6 columns">
         <h4 class="subheader">L'uso del defibrillatore su un ragazzino</h4>
         <div class="flex-video widescreen">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/otV2laDO16o?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
@@ -266,10 +278,12 @@ immagineTestata: https://prismic-io.s3.amazonaws.com/philips-defibrillatori/4f52
 </div>
 <hr>
 <div class="row">
-    <h2>Perchè scegliere un defibrillatore PHILIPS</h2>
+    <div class="columns">
+        <h2>Perchè scegliere un defibrillatore PHILIPS</h2>
+    </div>
 </div>
 <div class="row align-stretch">
-    <div class="columns domande">
+    <div class="small-12 medium-12 columns large-6  domande">
         <div>
             <h5><i class="fa fa-thumbs-o-up"></i> 8 anni di Garanzia</h5>
             <p>
@@ -278,7 +292,7 @@ immagineTestata: https://prismic-io.s3.amazonaws.com/philips-defibrillatori/4f52
         </div>
     </div>
 
-    <div class="columns domande">
+    <div class="small-12 medium-12 columns large-6  domande">
         <div>
             <h5><i class="fa fa-thumbs-o-up"></i> Installazione e collaudo presso la vostra sede</h5>
             <p>
@@ -288,7 +302,7 @@ immagineTestata: https://prismic-io.s3.amazonaws.com/philips-defibrillatori/4f52
     </div>
 </div>
 <div class="row align-stretch">
-    <div class="columns domande">
+    <div class="small-12 medium-12 columns large-6  domande">
         <div>
             <h5><i class="fa fa-thumbs-o-up"></i> Aggiornamenti inclusi</h5>
             <p>
@@ -297,7 +311,7 @@ immagineTestata: https://prismic-io.s3.amazonaws.com/philips-defibrillatori/4f52
             </p>
         </div>
     </div>
-    <div class="columns domande">
+    <div class="small-12 medium-12 large-6  columns domande">
 
         <div>
             <h5><i class="fa fa-thumbs-o-up"></i> Centri Assistenza in tutta Italia</h5>
@@ -308,7 +322,7 @@ immagineTestata: https://prismic-io.s3.amazonaws.com/philips-defibrillatori/4f52
     </div>
 </div>
 <div class="row align-stretch">
-    <div class="columns domande">
+    <div class="small-12 medium-12 large-6  columns domande">
         <div>
             <h5><i class="fa fa-thumbs-o-up"></i> Certificato FDA (Food and Drug Administration)</h5>
             <p>
@@ -317,7 +331,7 @@ immagineTestata: https://prismic-io.s3.amazonaws.com/philips-defibrillatori/4f52
         </div>
 
     </div>
-    <div class="columns">
+    <div class="small-12 medium-12 large-6  columns">
         <p>
             <!-- <img src="https://prismic-io.s3.amazonaws.com/philips-defibrillatori/ab4abd0a2ca392b565177bcd3f2dfa7b1fb2ec20_aed0310-dl-091209-2906f.jpg" /> -->
         </p>
@@ -326,11 +340,11 @@ immagineTestata: https://prismic-io.s3.amazonaws.com/philips-defibrillatori/4f52
 
 <%= partial "partials/rowCallToAction" %>
 
-<hr>
-<div class="row">
+<hr class="show-for-large">
+<div class="row show-for-large">
     <h4 class="subheader">Consigliati da:</h4>
 </div>
-<div class="row medium-unstack align-stretch">
+<div class="row medium-unstack align-stretch show-for-large">
     <div class="columns">
         <img src="https://lh3.googleusercontent.com/g6_oBmMbwa8Dgg444xp9HIheZCax3TGFv9TB4bsVz8ef_T06u4tMZqnNf5s4TqYtfzxPD_8uQfXLYqxcVDq27Tx2wHFW-KbKQS_iWaOSIapDWU84TnxX3KSzxTkCR7rZwJbUJYsJf2ctkHo4vh735-LKNGDF_6oNFCkDtIqFmdz_OanXmFby_a-WyYDMQysmr54jF4xETUHOQ8hOlh4ZkABFttKqCZa-9JkuVIPUfak-jXLVunP1Gl5PRR1lKK0aaJ6IxXj0m-_GOC6rLDRfbMqdHJwKUu8QaebR8MdT1FCAsEgdokW3CwAV7x37Ik120sW74tCdGsn8njqXMARAzf1zXIxA0bHcSlRgJx1vtsCZadKcmYZdc6MKwMKRkbrh_eATSsaFkeqf3MLZnmoBrkqjUV3wg_CazeRHSG46m5OaXrqVVvDepBmVEn8577_VOvmIUX5rAeqSqU5MOSfeLos5f-tf3BnHrNT59fsSFd7DUaq5qAXonWuZ6VpfaRuBfAYmD0U-O3asGjh_LsoT7eumqECo3tGvZivIKanubDTAcT7_SNYgYrs-2gycrSOVbZOtgQ=w1000-h500-no">
     </div>
