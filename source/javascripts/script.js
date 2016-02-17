@@ -1,6 +1,4 @@
-(function() {
-  $(function() {
-    //return console.log("hello");
-  });
+moment.locale('it');
+var lastDayOfMonth = moment().endOf('month').format("D\ MMMM YYYY");
 
-}).call(this);
+ $(".dataPromo").html(lastDayOfMonth);
