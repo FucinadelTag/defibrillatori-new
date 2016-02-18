@@ -1,0 +1,20 @@
+---
+layout: master_layout
+date: 2010-02-05
+conversionCode: >
+        <script type="text/javascript">
+            $(document).ready(function() {
+                if ($.urlParam('slug')) {
+                    var slug = $.urlParam('slug');
+                    var href = $(location).attr('href');
+                    var search = $(location).attr('search');
+                    var newHref = href.replace(search, slug);
+                    console.log  (newHref);
+
+                    window.location.href = newHref;
+
+                };
+
+            });
+        </script>
+---

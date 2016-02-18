@@ -25,20 +25,22 @@
     <div class="small-12 medium-12 large-10 columns">
         <div class="row align-stretch">
             <% blog.articles[1...50].each do |article| %>
-                <div class="small-12 medium-12 large-6 columns">
-                  <article>
-                    <% link_to article do %>
-                        <%= tag :img, :src => article.data.image, :title => article.title %>
-                    <% end %>
+                 <% if article.title  %>
+                    <div class="small-12 medium-12 large-6 columns">
+                      <article>
+                        <% link_to article do %>
+                            <%= tag :img, :src => article.data.image, :title => article.title %>
+                        <% end %>
 
-                    <h3>
-                      <a href="<%= article.url %>"><%= article.title %></a>
-                    </h3>
-                    <time><%= article.date.strftime('%b %e %Y') %></time>
-                    <p><%= article.data.summary %></p>
-                    <a href="<%= article.url %>">Leggi tutto</a>
-                  </article>
-                </div>
+                        <h3>
+                          <a href="<%= article.url %>"><%= article.title %></a>
+                        </h3>
+                        <time><%= article.date.strftime('%b %e %Y') %></time>
+                        <p><%= article.data.summary %></p>
+                        <a href="<%= article.url %>">Leggi tutto</a>
+                      </article>
+                    </div>
+                <% end %>
             <% end %>
         </div>
     </div>

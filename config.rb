@@ -137,7 +137,7 @@ activate :blog do |blog|
     blog.tag_template = "tag.html"
     blog.calendar_template = "calendar.html"
     blog.sources = "/news/view/{title}.html"
-    blog.permalink = "/blog/view/{title}.html"
+    blog.permalink = "/news/view/{title}.html"
 
     # Enable pagination
     blog.paginate = true
