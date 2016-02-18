@@ -156,7 +156,7 @@ configure :build do
 
   activate :gzip
 
-  activate :minify_html
+  # activate :minify_html
 
   # Enable cache buster
   # activate :asset_hash
