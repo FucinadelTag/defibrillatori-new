@@ -63,6 +63,31 @@ $ctaButton-radius: 30px !default;
     }
 }
 
+aside {
+    hr {
+        margin-bottom: 0.5rem;
+    }
+}
+
+.bannerAside {
+
+    .sconto {
+        font-size: rem-calc(40, null);
+        font-weight: 700;
+        color: $rosso-color;
+    }
+
+    .subSconto {
+        font-size: rem-calc(14, null);
+        font-weight: 300;
+        color: #000000;
+    }
+
+    .dataPromo {
+        text-transform: capitalize;
+    }
+}
+
 .banner {
     text-align: center;
     padding-top: rem-calc(50, null);

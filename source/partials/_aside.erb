@@ -2,12 +2,27 @@
 
 <aside class="small-2 columns show-for-large">
 
+    <h5><%= link_to 'Home '+blog.options.name, '/'+blog.options.name %></h5>
 
-    <h5>Tag</h5>
-    <div class="row">
-        <% blog.tags.each do |tag, articles| %>
-            <div class="small-12 columns small"><%= link_to tag+' ('+articles.size.to_s+')', tag_path(tag) %></div>
-         <% end %>
+    <hr>
+
+    <div class="row bannerAside">
+        <div class="small-12 columns">
+            <a href="#form">
+                <span class="subSconto hide-for-small">Defibrillatore Philips</span></span><br>
+                <span class="sconto">- 43%</span><br />
+                <span class="subSconto hide-for-small">Calcola il preventivo</span></span><br>
+            </a>
+        </div>
     </div>
+    <hr>
+    <% if  blog.tags.size > 0  %>
+        <h5>Tag</h5>
+        <div class="row">
+            <% blog.tags.each do |tag, articles| %>
+                <div class="small-12 columns small"><%= link_to tag+' ('+articles.size.to_s+')', tag_path(tag) %></div>
+             <% end %>
+        </div>
+    <% end %>
 
 </aside>
