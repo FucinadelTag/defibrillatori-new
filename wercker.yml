@@ -8,6 +8,12 @@ build:
         - bundle-install
         # Execute a custom script step.
         - script:
+            name: middleman sync blog
+            code: bundle exec middleman prismic prismic blog
+        - script:
+            name: middleman sync news
+            code: bundle exec middleman prismic prismic news
+        - script:
             name: middleman build
             code: bundle exec middleman build --verbose
 deploy:
