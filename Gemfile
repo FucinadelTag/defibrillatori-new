@@ -37,5 +37,7 @@ gem "podio_middleman", :git => 'git://github.com/FucinadelTag/FdtGems', :branch 
 
 gem "rest-client", :git => 'git://github.com/rest-client/rest-client'
 
+gem "middleman-minify-html"
+
 # FdtTools
 #gem "fdt_middleman_tools", ">= 1.0.0"
