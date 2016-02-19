@@ -26,6 +26,34 @@ $.getDivece = function () {
 
 }
 
+$.getCampaign = function (){
+
+    if (Cookies.get('campaign') !== undefined) {
+        var campaign = Cookies.get('campaign');
+    }
+    else {
+        var campaign = 'direct';
+    }
+
+
+    if ($.urlParam('gclid')) {
+        campaign = 'google';
+    }
+
+    if ($.urlParam('utm_source')) {
+        campaign = $.urlParam('utm_source');
+    }
+
+    Cookies.set('campaign', campaign, { expires: 100});
+
+    return campaign;
+}
+
+$.setCampaingInForm = function (fieldId) {
+    var newValue = $.getCampaign ();
+    $.setFormValue (fieldId, newValue);
+}
+
 $.setFormValue = function (fieldId, newValue){
     if ($(fieldId)) {
         $(fieldId).val(newValue);
