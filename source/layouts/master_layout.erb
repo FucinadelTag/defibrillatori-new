@@ -25,6 +25,14 @@
     <% end %>
 
     <script>
+        //SETTO LE DIMENSIONI DELLO SCHERMO NEL FORM
+        $(window).resize(function() {
+            $.setDeviceInForm ('#deviceForm');
+        })
+        $.setDeviceInForm ('#deviceForm');
+    </script>
+
+    <script>
         (function() {
             var _fbq = window._fbq || (window._fbq = []);
             if (!_fbq.loaded) {
