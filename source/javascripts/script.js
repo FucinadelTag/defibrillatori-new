@@ -28,7 +28,6 @@ $.getDivece = function () {
 
 $.setFormValue = function (fieldId, newValue){
     if ($(fieldId)) {
-        console.log (newValue);
         $(fieldId).val(newValue);
     }
 }

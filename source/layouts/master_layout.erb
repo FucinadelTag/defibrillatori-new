@@ -29,7 +29,10 @@
         $(window).resize(function() {
             $.setDeviceInForm ('#deviceForm');
         })
-        $.setDeviceInForm ('#deviceForm');
+
+        $( document ).ready(function() {
+            $.setDeviceInForm ('#deviceForm');
+        });
     </script>
 
     <script>
@@ -152,7 +155,6 @@
         <% if current_page.data.conversionCode  %>
             <%= current_page.data.conversionCode %>
         <% end %>
-
   </body>
 
 </html>
