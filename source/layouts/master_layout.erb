@@ -156,6 +156,27 @@
         </div>
         </noscript>
 
+        <!-- COOKIES POLICY-->
+        <script type="text/javascript">
+            var _iub = _iub || [];
+            _iub.csConfiguration = {
+                cookiePolicyId: 342605,
+                siteId: 251472,
+                banner: {
+                    slideDown: false,
+                    applyStyles: false,
+                    fontSize: "11px",
+                    textColor: "#ffffff",
+                    backgroundColor: '#9a9a9a',
+                    content: "<p>Questo sito si avvale di cookie necessari al suo funzionamento. Se vuoi saperne di pi&ugrave; consulta la %{cookie_policy_link}.<br />Chiudendo questo banner acconsenti all’uso dei cookie.</p>"
+                }
+            };
+            (function (w, d) {
+                var loader = function () { var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src = "//cdn.iubenda.com/cookie_solution/iubenda_cs.js"; tag.parentNode.insertBefore(s, tag); };
+                if (w.addEventListener) { w.addEventListener("load", loader, false); } else if (w.attachEvent) { w.attachEvent("onload", loader); } else { w.onload = loader; }
+            })(window, document);
+        </script>
+
         <%= javascript_include_tag  "all" %>
 
         <% if current_page.data.conversionCode  %>
