@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/FucinadelTag/FdtGems
-  revision: 0e64192f7aba3443bb29a4c49f24bd9e854a2815
+  revision: b2306df60cccd3767a7e1d749aa1ac4e92502183
   branch: 1.0
   specs:
     podio_middleman (0.0.1)
