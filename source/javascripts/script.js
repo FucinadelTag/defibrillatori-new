@@ -61,6 +61,12 @@ $.setFormValue = function (fieldId, newValue){
 }
 
 $.setDeviceInForm = function (fieldId) {
-    var newValue = $.getDivece ();
+    newValue = $.getDivece ();
+    $.setFormValue (fieldId, newValue);
+}
+
+$.setOptimizelyVariationInForm = function (fieldId, experimentId) {
+    newValue = optimizely.variationNamesMap[experimentId];
+    console.log (newValue);
     $.setFormValue (fieldId, newValue);
 }
