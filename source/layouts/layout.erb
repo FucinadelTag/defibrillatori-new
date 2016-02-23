@@ -1,11 +1,11 @@
 <% wrap_layout :master_layout do %>
 
-    <section class="title-container" style="background: url(<%= current_page.data.immagineTestata %>) center no-repeat; background-size: cover;">
+    <section class="title-container show-for-medium" style="background: url(<%= current_page.data.immagineTestata %>) center no-repeat; background-size: cover;">
             <div class="row clearfix">
                 <div class="title float-center">
                     <h1 class="big">
                         <% if current_page.data.testata.prima_riga != ''  %>
-                            <%= current_page.data.testata.prima_riga %><br class="show-for-large-up">
+                            <%= current_page.data.testata.prima_riga %>
                         <% end %>
                     </h1>
                     <span class="medium">
@@ -21,6 +21,28 @@
                     <% end %>
                 </div>
             </div>
+    </section>
+
+    <section class="title-container show-for-small-only">
+            <div class="row clearfix">
+                <div class="title float-center">
+                    <span class="title-mobile">
+                        <% if current_page.data.testata.prima_riga != ''  %>
+                            <%= current_page.data.testata.prima_riga %>
+                        <% end %>
+                    </span>
+                    <img src="<%= current_page.data.immagineTestata %>">
+                    <br><br>
+                    <% if current_page.data.testata.hasButton != 0  %>
+                        <span>
+                            <%= partial "partials/callToAction" %>
+                        </span>
+                    <% end %>
+                </div>
+            </div>
+
+
+
     </section>
 
     <%= yield %>

@@ -69,6 +69,11 @@ aside {
     }
 }
 
+.title-mobile {
+        font-size: rem-calc(40, null);
+        font-weight: 700;
+    }
+
 .bannerAside {
 
     .sconto {
@@ -106,6 +111,32 @@ aside {
         font-size: rem-calc(40, null);
         font-weight: 300;
         line-height: 5rem;
+        color: #000000;
+    }
+
+    .dataPromo {
+        text-transform: capitalize;
+    }
+}
+
+.banner-small {
+    text-align: center;
+    padding-bottom: rem-calc(20, null);
+    padding-left: rem-calc(10, null);
+    padding-right: rem-calc(10, null);
+
+    .sconto {
+        font-size: rem-calc(40, null);
+        font-weight: 700;
+        color: $rosso-color;
+        line-height: 3rem;
+    }
+
+
+    .subSconto {
+        font-size: rem-calc(20, null);
+        font-weight: 300;
+        line-height: 1rem;
         color: #000000;
     }
 
