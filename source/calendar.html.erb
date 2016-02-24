@@ -4,33 +4,55 @@ blog: blog
 pageable: true
 per_page: 12
 ---
-<h1>Archive for
-  <% case page_type
-     when 'day' %>
-    <%= Date.new(year, month, day).strftime('%b %e %Y') %>
-  <% when 'month' %>
-    <%= Date.new(year, month, 1).strftime('%b %Y') %>
-  <% when 'year' %>
-    <%= year %>
-  <% end %>
-</h1>
+<div class="row blog">
 
-<% if paginate && num_pages > 1 %>
-  <p>Page <%= page_number %> of <%= num_pages %></p>
+    <div class="small-10 columns">
 
-  <% if prev_page %>
-    <p><%= link_to 'Previous page', prev_page %></p>
-  <% end %>
-<% end %>
+        <h3>Elenco articoli: <strong>
+          <% case page_type
+             when 'day' %>
+            <%= Date.new(year, month, day).strftime('%b %e %Y') %>
+          <% when 'month' %>
+            <%= Date.new(year, month, 1).strftime('%b %Y') %>
+          <% when 'year' %>
+            <%= year %>
+          <% end %>
+        </strong></h3>
 
-<ul>
-  <% page_articles.each_with_index do |article, i| %>
-    <li><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></li>
-  <% end %>
-</ul>
+        <% if paginate && num_pages > 1 %>
+            <p>Pagina <%= page_number %> of <%= num_pages %>
 
-<% if paginate %>
-  <% if next_page %>
-    <p><%= link_to 'Next page', next_page %></p>
-  <% end %>
-<% end %>
+            <% if prev_page %>
+                <%= link_to '<< Precedente', prev_page %>
+            <% end %>
+            <% if next_page %>
+                <%= link_to '>> Successiva', next_page %></p>
+            <% end %>
+        <% end %>
+
+        <hr>
+
+        <div class="row align-stretch">
+            <% page_articles.each_with_index do |article, i| %>
+                <div class="small-6 columns">
+                  <article>
+                    <% link_to article do %>
+                        <%= tag :img, :src => article.data.image, :title => article.title %>
+                    <% end %>
+
+                    <h3>
+                      <a href="<%= article.url %>"><%= article.title %></a>
+                    </h3>
+                    <time><%= article.date.strftime('%b %e %Y') %></time>
+                    <p><%= article.data.summary %></p>
+                    <a href="<%= article.url %>">Read more</a>
+                  </article>
+                </div>
+            <% end %>
+        </div>
+
+    </div>
+
+    <%= partial "partials/aside" %>
+
+</div>
