@@ -15,5 +15,5 @@ summary: >
 <%= @body %>
 
 <p>
-    Fonte: <a href="<%= @fonte %>" target="_blank"><%= @fonte %></a>
+    <a href="<%= @fonte %>" target="_blank">Leggi la notizia originale</a>
 </p>
