@@ -18,7 +18,7 @@
 
             <div class="row">
                 <div class="small-6 columns">
-                    <label>Nome*
+                    <label>Nome e Cognome*
                         <input type="text" name="nome" required>
                         <span class="form-error">
                             Il campo Nome è obbligatorio
@@ -26,28 +26,6 @@
                     </label>
                 </div>
                 <div class="small-6 columns">
-                    <label>Cognome*
-                        <input type="text" name="cognome" required>
-                        <span class="form-error">
-                            Il campo Cognome è obbligatorio
-                        </span>
-                    </label>
-                </div>
-            </div>
-            <div class="row show-for-large">
-                <div class="small-12 medium-6 columns">
-                    <label>Di quanti defibrillatori hai bisogno?
-                        <input type="number" name="quantita" value="1">
-                    </label>
-                </div>
-                <div class="small-12 medium-6 columns">
-                    <legend>Struttura frequentata da bambini?</legend>
-                        <input type="radio" name="bambini" value="no" id="bambiniNo" checked><label for="bambiniNo">No</label>
-                        <input type="radio" name="bambini" value="si" id="bambiniSi"><label for="bambiniSi">Si</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="small-12 medium-6 columns">
                     <label>E-Mail*
                         <input type="email" name="email" required>
                         <span class="form-error">
@@ -55,20 +33,28 @@
                         </span>
                     </label>
                 </div>
-                <div class="small-12 medium-6 columns ow show-for-medium">
+            </div>
+            <div class="row">
+                <div class="small-12 medium-6 columns show-for-medium">
                     <label>Telefono
                         <input type="tel" name="telefono">
                     </label>
                 </div>
+                <fieldset class="medium-6 columns show-for-medium">
+                    <legend>Struttura frequentata da bambini?</legend>
+                    <input type="radio" name="bambini" value="no" id="bambiniNo" checked><label for="bambiniNo">No</label>
+                    <input type="radio" name="bambini" value="si" id="bambiniSi"><label for="bambiniSi">Si</label>
+                </fieldset>
             </div>
             <div class="row">
-                <div class="small-12 columns">
+                <div class="small-12 medium-12 columns">
                     <label>
-                        Richieste o Domande?
-                        <textarea placeholder="Richiedi un preventivo oppure fai una domanda. Ti risponderemo in pochi minuti!" rows="4" cols="50" name="messaggio"></textarea>
+                        Richieste o Domande?<br class="show-for-small-only"> <span class="small">(Sei iscritto a federazione o associazione sportiva?)</span>
+                        <textarea placeholder="Fai una domanda! Se sei iscritto ad una federazione o associazione sportiva indica il nome e scopri le offerte per te" rows="3" cols="50" name="messaggio"></textarea>
                     </label>
                 </div>
             </div>
+
             <div class="row">
                 <div class="small-12 columns">
                     <input type="checkbox" name="privacy" id="privacy" required checked>
@@ -82,7 +68,8 @@
             </div>
 
 
-            <div class="row">
+
+            <div class="row align-center">
                 <fieldset class="small-12 columns">
                     <button class="ctaButton button" type="submit" value="Submit">Calcola il tuo Preventivo</button>
                 </fieldset>
