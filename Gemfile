@@ -35,7 +35,8 @@ gem 'podio', :git => 'git://github.com/podio/podio-rb'
 gem "podio_middleman", :git => 'git://github.com/FucinadelTag/FdtGems', :branch => '1.0'
 #gem "podio_middleman", :path => '../FdtGems/'
 
-gem "fdtCrm_middleman", :path => '../FdtGems/'
+gem "fdtCrm_middleman", :git => 'git://github.com/FucinadelTag/FdtGems', :branch => '1.0'
+#gem "fdtCrm_middleman", :path => '../FdtGems/'
 
 gem "rest-client", :git => 'git://github.com/rest-client/rest-client'
 
