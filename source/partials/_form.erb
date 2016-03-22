@@ -1,104 +1,106 @@
-<div id="form" class="row evidenza clearfix">
-    <div class="float-center">
-        <span>Calcola il tuo preventivo</span><br>
-        gratuito e senza impegno
+<section class="form">
+    <div id="form" class="row evidenza clearfix">
+        <div class="float-center">
+            <span>Calcola il tuo preventivo</span><br>
+            gratuito e senza impegno
+        </div>
+
     </div>
-
-</div>
-<div class="row">
-    <div class="small-12 medium-12 <%= form_class_large %> columns callout">
-        <form data-abide novalidate accept-charset="UTF-8" action="https://formkeep.com/f/4f1774d6670a" method="POST">
-            <!-- <div data-abide-error class="alert callout" style="display: none;">
-                <p><i class="fi-alert"></i> Si sono verificati alcuni errori evidenziati in rosso.</p>
-            </div> -->
-            <input type="hidden" id="deviceForm" name="device" value="large">
-            <input type="hidden" id="campagnaForm" name="campagna" value="direct">
-            <input type="hidden" id="optimizelyVariationForm" name="optimizelyVariation" value="">
+    <div class="row">
+        <div class="small-12 medium-12 <%= form_class_large %> columns callout">
+            <form data-abide novalidate accept-charset="UTF-8" action="https://formkeep.com/f/4f1774d6670a" method="POST">
+                <!-- <div data-abide-error class="alert callout" style="display: none;">
+                    <p><i class="fi-alert"></i> Si sono verificati alcuni errori evidenziati in rosso.</p>
+                </div> -->
+                <input type="hidden" id="deviceForm" name="device" value="large">
+                <input type="hidden" id="campagnaForm" name="campagna" value="direct">
+                <input type="hidden" id="optimizelyVariationForm" name="optimizelyVariation" value="">
 
 
-            <div class="row">
-                <div class="small-6 columns">
-                    <label>Nome e Cognome*
-                        <input type="text" name="nome" required>
-                        <span class="form-error">
-                            Il campo Nome è obbligatorio
-                        </span>
-                    </label>
-                </div>
-                <div class="small-6 columns">
-                    <label>E-Mail*
-                        <input type="email" name="email" required>
-                        <span class="form-error">
-                            Il campo E-Mail è obbligatorio
-                        </span>
-                    </label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="small-12 medium-6 columns show-for-medium">
-                    <label>Telefono
-                        <input type="tel" name="telefono">
-                    </label>
-                </div>
-                <fieldset class="medium-6 columns show-for-medium">
-                    <legend>Struttura frequentata da bambini?</legend>
-                    <input type="radio" name="bambini" value="no" id="bambiniNo" checked><label for="bambiniNo">No</label>
-                    <input type="radio" name="bambini" value="si" id="bambiniSi"><label for="bambiniSi">Si</label>
-                </fieldset>
-            </div>
-            <div class="row">
-                <div class="small-12 medium-12 columns">
-                    <label>
-                        Richieste o Domande?<br class="show-for-small-only"> <span class="small">(Fai parte di federazioni o associazioni sportive?)</span>
-                        <textarea rows="3" cols="50" name="messaggio"></textarea>
-                    </label>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="small-12 columns">
-                    <input type="checkbox" name="privacy" id="privacy" required checked>
-                        <label for="privacy">
-                            Ho letto e accetto l'informativa sulla <a href="/privacy" target="_blank">Privacy</a>
+                <div class="row">
+                    <div class="small-6 columns">
+                        <label>Nome e Cognome*
+                            <input type="text" name="nome" required>
                             <span class="form-error">
-                                <p>Accetta l'informativa sulla privacy!</p>
+                                Il campo Nome è obbligatorio
                             </span>
                         </label>
+                    </div>
+                    <div class="small-6 columns">
+                        <label>E-Mail*
+                            <input type="email" name="email" required>
+                            <span class="form-error">
+                                Il campo E-Mail è obbligatorio
+                            </span>
+                        </label>
+                    </div>
                 </div>
-            </div>
-
-
-
-            <div class="row align-center">
-                <fieldset class="small-12 columns">
-                    <button class="ctaButton button" type="submit" value="Submit">Calcola il tuo Preventivo</button>
-                </fieldset>
-            </div>
-      </form>
-    </div>
-    <div class="small-12 medium-12 <%= phone_class_large %> columns clearfix">
-            <div class="row">
-                <div class="columns vantaggiForm">
-                    <p>
-                        <div class="box_nverde center">
-                            <span>Se preferisci usa il Numero Verde gratuito!</span><br />
-                            <span class="numero-verde"> 800 782 217 </span><br />
-                            <span>Lun-Ven dalle 8.30 alle 17.30</span>
-                        </div>
-                    </p>
-                    <h5 class="show-for-medium">
-                        <i class="fa fa-money"></i> Usufruisci del 43% di sconto
-                    </h5>
-                    <h5 class="show-for-medium">
-                        <i class="fa fa-tachometer"></i> Ricevi un preventivo in pochi minuti
-                    </h5>
-                    <h5 class="show-for-medium">
-                        <i class="fa fa-check"></i> Nessun impegno di acquisto
-                    </h5>
-                    <h5 class="show-for-medium">
-                        <i class="fa fa-user"></i> Un esperto è sempre a tua disposizione
-                    </h5>
+                <div class="row">
+                    <div class="small-12 medium-6 columns show-for-medium">
+                        <label>Telefono
+                            <input type="tel" name="telefono">
+                        </label>
+                    </div>
+                    <fieldset class="medium-6 columns show-for-medium">
+                        <legend>Struttura frequentata da bambini?</legend>
+                        <input type="radio" name="bambini" value="no" id="bambiniNo" checked><label for="bambiniNo">No</label>
+                        <input type="radio" name="bambini" value="si" id="bambiniSi"><label for="bambiniSi">Si</label>
+                    </fieldset>
                 </div>
-            </div>
+                <div class="row">
+                    <div class="small-12 medium-12 columns">
+                        <label>
+                            Richieste o Domande?<br class="show-for-small-only"> <span class="small">(Fai parte di federazioni o associazioni sportive?)</span>
+                            <textarea rows="3" cols="50" name="messaggio"></textarea>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="small-12 columns">
+                        <input type="checkbox" name="privacy" id="privacy" required checked>
+                            <label for="privacy">
+                                Ho letto e accetto l'informativa sulla <a href="/privacy" target="_blank">Privacy</a>
+                                <span class="form-error">
+                                    <p>Accetta l'informativa sulla privacy!</p>
+                                </span>
+                            </label>
+                    </div>
+                </div>
+
+
+
+                <div class="row align-center">
+                    <fieldset class="small-12 columns">
+                        <button class="ctaButton button" type="submit" value="Submit">Calcola il tuo Preventivo</button>
+                    </fieldset>
+                </div>
+          </form>
+        </div>
+        <div class="small-12 medium-12 <%= phone_class_large %> columns clearfix">
+                <div class="row">
+                    <div class="columns vantaggiForm">
+                        <p>
+                            <div class="box_nverde center">
+                                <span>Se preferisci usa il Numero Verde gratuito!</span><br />
+                                <span class="numero-verde"> 800 782 217 </span><br />
+                                <span>Lun-Ven dalle 8.30 alle 17.30</span>
+                            </div>
+                        </p>
+                        <h5 class="show-for-medium">
+                            <i class="fa fa-money"></i> Usufruisci del 43% di sconto
+                        </h5>
+                        <h5 class="show-for-medium">
+                            <i class="fa fa-tachometer"></i> Ricevi un preventivo in pochi minuti
+                        </h5>
+                        <h5 class="show-for-medium">
+                            <i class="fa fa-check"></i> Nessun impegno di acquisto
+                        </h5>
+                        <h5 class="show-for-medium">
+                            <i class="fa fa-user"></i> Un esperto è sempre a tua disposizione
+                        </h5>
+                    </div>
+                </div>
+        </div>
     </div>
-</div>
+</section>

@@ -33,7 +33,7 @@ conversionCode: >
                         <p class="callout">
                             A seguito del decreto Balduzzi tutte le società sportive hanno l’<strong>obbligo</strong> di dotarsi di un defibrillatore entro <strong>Giugno 2016</strong>!
                         </p>
-                        <span class="show-for-medium">
+                        <span>
                             <h5><i class="fa fa-check-square-o"></i> A norma di legge secondo il decreto Balduzzi</h5>
                             <p>
                                 Il defibrillatore Philips <strong>è a norma di legge</strong> perché risponde a tutti i requisiti del decreto Balduzzi. Ricorda che il defibrillatore deve essere presente anche durante gli allenamenti.
@@ -72,6 +72,10 @@ conversionCode: >
 
 
     <div class="small-12 medium-5 columns">
-        <%= partial "partials/form", :locals => { :form_class_large => "large-12", :phone_class_large => "large-12"} %>
+        <div class="row domande form">
+            <div class="small-12 medium-12 large-12 columns">
+                <%= partial "partials/form", :locals => { :form_class_large => "large-12", :phone_class_large => "large-12"} %>
+            </div>
+        </div>
     </div>
 </div>
