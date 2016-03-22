@@ -1,16 +1,74 @@
 ---
-layout: master_layout
 title: Defibrillatore Semiautomatico Philips - Il più Venduto al Mondo!
 description: Scopri Prezzi, Promozioni e Tutte le Informazioni del Defibrillatore Semiautomatico Philips. Richiedi ora per Maggiori Informazioni!
+testata:
+    prima_riga: Defibrillatore Philips
+    seconda_riga: Il meglio per i tuoi ragazzi!
+immagineTestata: https://prismic-io.s3.amazonaws.com/philips-defibrillatori/919ebeee2c1efbc7e9e6de7755b5b8e3c83a9c9c_calcio.jpg
 
-headCode: >
-            <script type="text/javascript">
-                var href = $(location).attr('href');
-                var newHref = href.replace(/\/sport\/.*/, '/');
-
-                window.location.href = newHref;
-
-
-            </script>
+conversionCode: >
+                    <!-- MOMENT -->
+                    <script src="https://s3-eu-west-1.amazonaws.com/cdn.fucinadeltag.it/moment.js"></script>
+                    <script type="text/javascript">
+                        moment.locale('it');
+                        var lastDayOfMonth = moment().endOf('month').format("D\ MMMM YYYY");
+                        $(".dataPromo").html(lastDayOfMonth);
+                    </script>
+                    <!-- /MOMENT -->
 
 ---
+<%= partial "partials/promo_section" %>
+
+<hr>
+<p></p>
+
+<div class="row">
+    <div class="small-12 medium-7 columns">
+        <div class="row domande">
+                <div class="small-12 medium-12 large-12 columns">
+                        <h2><strong>Proteggi i tuoi ragazzi!</strong></h2>
+
+                        <p class="callout">
+                            A seguito del decreto Balduzzi tutte le società sportive hanno l’<strong>obbligo</strong> di dotarsi di un defibrillatore entro <strong>Giugno 2016</strong>!
+                        </p>
+                        <span class="show-for-medium">
+                            <h5><i class="fa fa-check-square-o"></i> A norma di legge secondo il decreto balduzzi</h5>
+                            <p>
+                                Il defibrillatore Philips <strong>è a norma di legge</strong> perché risponde a tutti i requisiti del decreto Balduzzi. Ricorda che il defibrillatore deve essere presente anche durante gli allenamenti.
+                            </p>
+                            <h5><i class="fa fa-check-square-o"></i> Sempre pronto all'uso sul campo o nella tua palestra</h5>
+                            <p>
+                                Il defibrillatore Philips è <strong>pronto ad essere utilizzato</strong> in qualsiasi momento. E' dotato di una batteria che lo rende autonomo dalla rete elettrica.
+                            </p>
+                            <h5><i class="fa fa-check-square-o"></i> Adatto ad adulti e bambini</h5>
+                            <p>
+                                Il defibrillatore Philips ha in dotazione un'<strong>unica coppia di elettrodi</strong> validi sia per adulti che per bambini, grazie all'ausilio di una semplice chiavetta pediatrica.
+                            </p>
+                            <h5><i class="fa fa-check-square-o"></i> Facile da usare da allenatori, genitori e ragazzi stessi</h5>
+                            <p>
+                                <strong>Il defibrillatore Philips ti guida con la voce</strong>. Nulla da leggere o da interpretare. Con un design semplice ed essenziale aiuta il soccorritore in ogni fase di utilizzo.
+                            </p>
+                            <h5><i class="fa fa-check-square-o"></i> Ideale per qualsiasi sport</h5>
+                            <p>
+                                Che si tratti di una squadra di calcio che gioca sotto la pioggia, o di un gruppo di danza popolare, <strong>il defibrillatore Philips è adatto ad ogni situazione</strong>. Sempre pronto all'uso e affidabile.
+                            </p>
+                        </span>
+
+                </div>
+        </div>
+        <div class="row callout">
+            <div class="small-12 medium-12 large-12 columns center">
+                <h3> Tutti possono usare il defibrillatore</h3>
+                <hr>
+                <h4>Un corso di 4 ore ti permette di salvare una vita!</h4>
+
+                <h5>Non perdere tempo</h5>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="small-12 medium-5 columns">
+        <%= partial "partials/form", :locals => { :form_class_large => "large-12", :phone_class_large => "large-12"} %>
+    </div>

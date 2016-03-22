@@ -14,7 +14,7 @@ gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]
 # Windows does not come with time zone data
 gem "tzinfo-data", platforms: [:mswin, :mingw, :jruby]
 
-gem "middleman-blog"
+gem "middleman-blog", ">= 4.0.0"
 
 gem "middleman-compass"
 
@@ -34,6 +34,8 @@ gem "prismic_middleman", :git => 'git://github.com/FucinadelTag/FdtGems', :branc
 gem 'podio', :git => 'git://github.com/podio/podio-rb'
 gem "podio_middleman", :git => 'git://github.com/FucinadelTag/FdtGems', :branch => '1.0'
 #gem "podio_middleman", :path => '../FdtGems/'
+
+gem "fdtCrm_middleman", :path => '../FdtGems/'
 
 gem "rest-client", :git => 'git://github.com/rest-client/rest-client'
 

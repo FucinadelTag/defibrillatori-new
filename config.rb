@@ -98,6 +98,10 @@ activate :prismic_middleman do |f|
     }
 end
 
+activate :fdtCrm_middleman do |f|
+  f.fdtCrm_url = 'http://lorenzo.ngrok.io/api/middleman'
+end
+
 activate :podio_middleman do |f|
   f.podio_api_key = 'runscope'
   f.podio_api_secret = 'D3FrXAJWyuyNY0A7uA2WYFRvnT9IcweKpTXsdgmRn1Rot5iOZ5XX17KarPUoqJTO'
