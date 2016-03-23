@@ -188,64 +188,7 @@ conversionCode: >
 
 </section>
 <hr>
-<section class="show-for-medium">
-    <div class="row">
-        <div class="columns">
-            <h4>Speciali convenzioni con <strong>LND</strong> della FIGC - <strong>FISE</strong> - <strong>ILCOR Comunità</strong>:</h4>
-        </div>
-    </div>
-    <div class="row medium-unstack align-stretch">
-        <div class="columns">
-            <img src="https://prismic-io.s3.amazonaws.com/philips-defibrillatori/ec85a64be853c56d7195c7076adba69857a26f3d_csi.png">
-        </div>
-        <div class="columns">
-            <img src="https://prismic-io.s3.amazonaws.com/philips-defibrillatori/a7eeb95c1da5973f3d0653a94f69aff862dd5c61_logo-fip.png">
-        </div>
-        <div class="columns">
-            <img src="https://prismic-io.s3.amazonaws.com/philips-defibrillatori/6114dac7f5ef54486d094f548fff458417fae280_logo_libertas.jpg">
-        </div>
-        <div class="columns">
-            <img src="https://prismic-io.s3.amazonaws.com/philips-defibrillatori/4b9fe64d3a002c1c7b3ed1080b6267d061e981a0_logo_fibs.jpeg">
-        </div>
-        <div class="columns">
-            <img src="https://prismic-io.s3.amazonaws.com/philips-defibrillatori/880c70d35e92438361dd570d7a36be20047649ba_logo_aics.jpeg">
-        </div>
-    </div>
-    <div class="row">
-        <div class="columns">
-
-        </div>
-    </div>
-</section>
-<section class="show-for-small-only">
-    <div class="row">
-        <div class="columns">
-            <h4>Speciali convenzioni con:</h4>
-        </div>
-    </div>
-    <div class="row small-unstack align-stretch">
-        <div class="columns domande">
-            <p>LND - Lega Nazionele Dilettanti della FIGC</p>
-
-            <p>FISE - Federazione Italiana Sport Equestri</p>
-
-            <p>CSI - Centro sportivo italiano</p>
-
-            <p>Fip - Federazione Italiana Pallacanestro</p>
-
-            <p>FIBS - Federazione Italiana Baseball Softball</p>
-
-            <p>AICS - Associazione Italiana Cultura e Sport</p>
-
-            <p>ILCOR Comunità</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="columns">
-
-        </div>
-    </div>
-</section>
+<%= partial "partials/sport" %>
 <hr>
 <%= partial "partials/form", :locals => { :form_class_large => "large-7", :phone_class_large => "large-5"} %>
 
@@ -351,66 +294,8 @@ conversionCode: >
     </div>
 </div>
 <hr>
-<div class="row">
-    <div class="columns">
-        <h2>Perchè scegliere un defibrillatore PHILIPS</h2>
-    </div>
-</div>
-<div class="row align-stretch">
-    <div class="small-12 medium-12 columns large-6  domande">
-        <div>
-            <h5><i class="fa fa-thumbs-o-up"></i> 8 anni di Garanzia</h5>
-            <p class="show-for-medium">
-                Su <srong>tutte le componenti tecnologiche</srong> del defibrillatore escluse le parti consumabili.
-            </p>
-        </div>
-    </div>
 
-    <div class="small-12 medium-12 columns large-6  domande">
-        <div>
-            <h5><i class="fa fa-thumbs-o-up"></i> Installazione e collaudo presso la vostra sede</h5>
-            <p class="show-for-medium">
-                Il Defibrillatore Philips verrà <strong>messo in opera e collaudato da un nostro tecnico senza costi aggiuntivi</strong>. Non dovrai preoccuparti di nulla!
-            </p>
-        </div>
-    </div>
-</div>
-<div class="row align-stretch">
-    <div class="small-12 medium-12 columns large-6  domande">
-        <div>
-            <h5><i class="fa fa-thumbs-o-up"></i> Aggiornamenti inclusi</h5>
-            <p class="show-for-medium">
-                In caso di modifica dei protocolli di sicurezza, il tuo defibrillatore verrà aggiornato gratuitamente.
-                La Philips provvede ad inviare un proprio tecnico per gli aggiornamenti <strong>senza alcuna spesa da parte del cliente</strong>!
-            </p>
-        </div>
-    </div>
-    <div class="small-12 medium-12 large-6  columns domande">
-
-        <div>
-            <h5><i class="fa fa-thumbs-o-up"></i> Centri Assistenza in tutta Italia</h5>
-            <p class="show-for-medium">
-                Iredeem, distributore Ufficiale di Philips, è una realtà al 100% italiana con sede a Bologna. <strong>La Philips, multinazionale Olandese ha sede a Monza</strong>. Siamo persone vicine a te!
-            </p>
-        </div>
-    </div>
-</div>
-<div class="row align-stretch">
-    <div class="small-12 medium-12 large-6  columns domande">
-        <div>
-            <h5><i class="fa fa-thumbs-o-up"></i> Certificato FDA (Food and Drug Administration)</h5>
-            <p class="show-for-medium">
-                Il mercato americano è il primo e maggiore mercato mondiale per la vendita di defibrillatori: la Certificazione FDA (ente americano sulla sicurezza) garantisce l’applicazioni di standard molto rigorosi nella verifica di affidabilità.
-            </p>
-        </div>
-
-    </div>
-    <div class="small-12 medium-12 large-6  columns">
-        <p>
-            <!-- <img src="https://prismic-io.s3.amazonaws.com/philips-defibrillatori/ab4abd0a2ca392b565177bcd3f2dfa7b1fb2ec20_aed0310-dl-091209-2906f.jpg" /> -->
-        </p>
-    </div>
-</div>
+<%= partial "partials/perche_philips" %>
 
 <%= partial "partials/rowCallToAction" %>
 

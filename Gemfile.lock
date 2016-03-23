@@ -1,8 +1,10 @@
 GIT
   remote: git://github.com/FucinadelTag/FdtGems
-  revision: b2306df60cccd3767a7e1d749aa1ac4e92502183
+  revision: 5b0d3d0768b28efc4e6f40121a6419d203f05aae
   branch: 1.0
   specs:
+    fdtCrm_middleman (0.0.1)
+      middleman-core
     podio_middleman (0.0.1)
       middleman-core (>= 3.3.2)
     prismic_middleman (0.0.1)
@@ -26,12 +28,6 @@ GIT
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 3.0)
       netrc (~> 0.8)
-
-PATH
-  remote: ../FdtGems/
-  specs:
-    fdtCrm_middleman (0.0.1)
-      middleman-core
 
 GEM
   remote: https://rubygems.org/
