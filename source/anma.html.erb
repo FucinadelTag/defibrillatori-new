@@ -1,0 +1,84 @@
+---
+title: Defibrillatore Semiautomatico Philips - Il più Venduto al Mondo!
+description: Scopri Prezzi, Promozioni e Tutte le Informazioni del Defibrillatore Semiautomatico Philips. Richiedi ora per Maggiori Informazioni!
+testata:
+    prima_riga: Defibrillatore Philips
+    seconda_riga: Per rendere l'azienda un luogo più sicuro!
+immagineTestata: https://prismic-io.s3.amazonaws.com/philips-defibrillatori/137c7b911386729fe90c80982cfd26add94bdf90.jpg
+
+conversionCode: >
+                    <!-- MOMENT -->
+                    <script src="https://s3-eu-west-1.amazonaws.com/cdn.fucinadeltag.it/moment.js"></script>
+                    <script type="text/javascript">
+                        moment.locale('it');
+                        var lastDayOfMonth = moment().endOf('month').format("D\ MMMM YYYY");
+                        $(".dataPromo").html(lastDayOfMonth);
+                    </script>
+                    <!-- /MOMENT -->
+
+---
+<%= partial "partials/promo_section" %>
+
+<div class="row">
+    <div class="small-12 medium-7 columns">
+        <div class="row domande">
+                <div class="small-12 medium-12 large-12 columns">
+                        <h2><strong>Azienda cardioprotetta!</strong></h2>
+
+                        <p class="callout">
+                            Ogni anno sui luoghi di lavoro si verificano <strong>10.000 casi di arresto cardiaco</strong>.
+                        </p>
+                         <span>
+                            <h5>Sicurezza per i tuoi dipendenti</h5>
+                            <p>
+                                Con l'uso tempestivo del defibrillatore la <strong>sopravvivenza</strong> potrebbe aumentare fino al 60%.
+                            </p>
+                            <h5>Formazione</h5>
+                            <p>
+                                Con l'acquisto di un defibrillatore Philips ti aiutiamo ad organizzare il <strong>corso di formazione</strong> direttamente presso la tua azienda.
+                            </p>
+                            <h5>Sponsorizzazioni</h5>
+                            <p>
+                                <strong>Donare un defibrillatore</strong> permette di salvare vite! Puoi sponsorizzare la tua azienda donando il dispositivo Philips alla tua città o un'associazione locale. Se lo desideri ti aiutiamo ad avere <strong>visibilità nella tua zona</strong> pubblicando la notizia sui nostri canali.
+                            </p>
+                        </span>
+
+                </div>
+        </div>
+        <p></p>
+        <div class="row callout">
+            <div class="small-12 medium-12 large-12 columns center">
+                <h3> Tutti possono usare il defibrillatore</h3>
+                <hr>
+                <h4>Un corso di 4 ore ti permette di salvare una vita!</h4>
+
+                <h5>Non perdere tempo</h5>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="small-12 medium-5 columns">
+        <div class="row domande form">
+            <div class="small-12 medium-12 large-12 columns">
+                <%= partial "partials/form", :locals => { :form_class_large => "large-12", :phone_class_large => "large-12"} %>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr>
+
+<div class="row">
+    <div class="small-12 medium-12 large-12 columns">
+        <h3>Scopri come salvare una vita sul posto di lavoro!</h3>
+        <div class="flex-video widescreen">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/YDjkkgblBjM?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+
+<%= partial "partials/perche_philips" %>
+
+<%= partial "partials/rowCallToAction" %>
