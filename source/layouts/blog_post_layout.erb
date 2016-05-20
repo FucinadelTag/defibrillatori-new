@@ -1,23 +1,28 @@
 <% wrap_layout :master_layout do %>
 
-    <section class="title-container blog" style="background: url(<%= current_page.data.image %>) center no-repeat; background-size: cover;">
-        <div class="row">
-            <div class="small-12 columns title">
-                <h1>
-                    <%= current_page.data.title %><br class="show-for-large-up">
-                </h1>
-                <time><%= current_page.data.date.strftime('%b %e %Y') %></time>
-                <p>
-                    <%= current_page.data.summary %>
-                </p>
-
-            </div>
-        </div>
-    </section>
 
     <div class="row blog align-center">
 
-        <div class="small-12 medium-7 columns">
+        <div class="small-12 medium-9 columns">
+
+            <div class="row">
+
+                <div class="small-12 columns title">
+                    <h2>
+                        <%= current_page.data.title %>
+                    </h2>
+
+                    <time><%= current_page.data.date.strftime('%b %e %Y') %></time>
+                    <p>
+                        <%= tag :img, :src => current_page.data.image, :title => current_page.data.title, :style =>"float:left;padding:10px" %>
+                        <i><%= current_page.data.summary %></i>
+                    </p>
+
+
+
+                </div>
+            </div>
+
             <%= yield %>
 
             <hr>
