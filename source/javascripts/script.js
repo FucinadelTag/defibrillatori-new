@@ -49,8 +49,31 @@ $.getCampaign = function (){
     return campaign;
 }
 
+$.getCampaignName = function (){
+
+    if (Cookies.get('campaignName') !== undefined) {
+        var campaignName = Cookies.get('campaignName');
+    }
+    else {
+        var campaignName = 'not_set';
+    }
+
+    if ($.urlParam('utm_campaign')) {
+        campaignName = $.urlParam('utm_campaign');
+    }
+
+    Cookies.set('campaignName', campaignName, { expires: 100});
+
+    return campaignName;
+}
+
 $.setCampaingInForm = function (fieldId) {
     var newValue = $.getCampaign ();
+    $.setFormValue (fieldId, newValue);
+}
+
+$.setCampaingNameInForm = function (fieldId) {
+    var newValue = $.getCampaignName ();
     $.setFormValue (fieldId, newValue);
 }
 
