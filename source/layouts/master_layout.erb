@@ -114,12 +114,25 @@
                 </ul>
             </div>
             <div class="top-bar-right show-for-large">
-                <ul class="menu">
-                    <li><%= link_to 'Per le aziende', '/aziende' %></li>
-                    <li><%= link_to 'Per lo sport', '/sport' %></li>
-                    <li><%= link_to 'Quanto costa?', '/defibrillatore_costo' %></li>
-                    <li><%= link_to 'Corsi abilitazione', '/abilitarsi-alluso' %></li>
-
+                <ul class="dropdown menu" data-dropdown-menu>
+                <li>
+                    <a href="#">In ogni Luogo</a>
+                    <ul class="menu">
+                        <li><%= link_to 'In Azienda', '/aziende' %></li>
+                        <li><%= link_to 'Durante lo Sport', '/sport' %></li>
+                        <li><%= link_to 'A Scuola', '/scuola' %></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Storie di successo</a>
+                    <ul class="menu">
+                        <li><%= link_to 'Musei Vaticani', '/museivaticani' %></li>
+                        <li><%= link_to 'Scuole in Campania', '/scuolecampania' %></li>
+                        <li><%= link_to 'In azienda', '/brembo' %></li>
+                    </ul>
+                </li>
+                <li><%= link_to 'Quanto costa?', '/defibrillatore_costo' %></li>
+                <li><%= link_to 'Corsi abilitazione', '/abilitarsi-alluso' %></li>
                 </ul>
             </div>
         </div>

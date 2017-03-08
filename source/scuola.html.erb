@@ -1,0 +1,109 @@
+---
+title: Defibrillatore Semiautomatico Philips - Il più Venduto al Mondo!
+description: Scopri Prezzi, Promozioni e Tutte le Informazioni del Defibrillatore Semiautomatico Philips. Richiedi ora per Maggiori Informazioni!
+testata:
+    prima_riga: Defibrillatore Philips
+    seconda_riga: Proteggiamo i nostri figli!
+immagineTestata: https://prismic-io.s3.amazonaws.com/philips-defibrillatori/1be97389c223cbf731b5d515a33c1b8932389d19_scuola.jpg
+
+conversionCode: >
+                    <!-- MOMENT -->
+                    <script src="https://s3-eu-west-1.amazonaws.com/cdn.fucinadeltag.it/moment.js"></script>
+                    <script type="text/javascript">
+                        moment.locale('it');
+                        var lastDayOfMonth = moment().endOf('month').format("D\ MMMM YYYY");
+                        $(".dataPromo").html(lastDayOfMonth);
+                    </script>
+                    <!-- /MOMENT -->
+
+---
+<%= partial "partials/promo_section" %>
+
+<div class="row">
+    <div class="small-12 medium-7 columns">
+        <div class="row domande">
+                <div class="small-12 medium-12 large-12 columns">
+                        <h2><strong>Proteggiamo i nosri figli!</strong></h2>
+
+                        <p class="callout">
+                            L’arresto cardiaco può colpire chiunque, indipendentemente dall’età.<br>
+                            <strong>Il 3,5% dei deceduti per arresto cardiaco ha infatti meno di 8 anni</strong>! Secondo i dati Istat sono 1000 le persone sotto i 35 anni che ne muoiono ogni anno.
+                        </p>
+                        <span>
+                            <h5><i class="fa fa-check-square-o"></i> Sempre pronto all'uso</h5>
+                            <p>
+                                Il nostro dispositivo è <strong>pronto ad essere utilizzato</strong> in qualsiasi momento. E' dotato di una batteria che lo rende autonomo dalla rete elettrica.
+                            </p>
+                            <h5><i class="fa fa-check-square-o"></i> Adatto ad adulti e bambini</h5>
+                            <p>
+                                Il nostro dispositivo ha in dotazione un'<strong>unica coppia di elettrodi</strong> validi sia per adulti che per bambini, grazie all'ausilio di una semplice chiavetta pediatrica.
+                            </p>
+                            <h5><i class="fa fa-check-square-o"></i> Facile da usare da insegnanti, genitori e ragazzi stessi</h5>
+                            <p>
+                                <strong>Il defibrillatore Philips ti guida con la voce</strong>. Nulla da leggere o da interpretare. Con un design semplice ed essenziale aiuta il soccorritore in ogni fase di utilizzo.
+                            </p>
+                            <h5><i class="fa fa-check-square-o"></i> A norma di legge secondo il decreto Balduzzi</h5>
+                            <p>
+                                Il nostro dispositivo <strong>è a norma di legge</strong> perché risponde a tutti i requisiti del decreto Balduzzi. Ricorda che il DAE deve essere sempre presente durante l'attività fisica.
+                            </p>
+                        </span>
+
+                </div>
+        </div>
+        <div class="row callout">
+            <div class="small-12 medium-12 large-12 columns">
+                <h5> <strong>Scuole Sicure</strong> </h5>
+                <hr>
+                <p>
+                    Una scuola dotata di un defibrillatore è una <strong>scuola più sicura</strong>: in caso di arresto cardiaco il defibrillatore è immediatamente disponibile, permettendo quindi una defibrillazione precoce in pochissimi minuti.
+                </p>
+            </div>
+        </div>
+        <hr>
+        <div class="row callout">
+            <div class="small-12 medium-12 large-12 columns">
+                <h5> Defibrillatori per gli edifici popolati</h5>
+                <hr>
+                <p>
+                    Gli istituti scolastici sono strutture molto popolate, con scuole che possono contenere più di 2500 studenti: <strong>le zone ad alta densità di persone dovrebbero essere dotate di un defibrillatore</strong>, proprio come supermercati, aziende, condomini e piazze.
+                </p>
+            </div>
+        </div>
+        <hr>
+        <div class="row callout">
+            <div class="small-12 medium-12 large-12 columns">
+                <h5> Defibrillatori per le attività sportive</h5>
+                <hr>
+                <p>
+                    I defibrillatori vanno impiegati ovunque si svolga attività sportiva non agonistica, come durante l’ora di educazione motoria a scuola. <strong>Un’attività sportiva intensa può mettere a rischio il cuore di studenti</strong> che ancora non sanno di essere portatori di malattie cardiovascolari.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="small-12 medium-5 columns">
+        <div class="row domande form">
+            <div class="small-12 medium-12 large-12 columns">
+                <%= partial "partials/form", :locals => { :form_class_large => "large-12", :phone_class_large => "large-12"} %>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr>
+<%= partial "partials/sport" %>
+
+<div class="row">
+    <div class="small-12 medium-12 large-12 columns">
+        <h3>Scopri come salvare una vita di un ragazzino su un campo di Pallavolo!</h3>
+        <div class="flex-video widescreen">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/otV2laDO16o?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+
+<%= partial "partials/perche_philips" %>
+
+<%= partial "partials/rowCallToAction" %>
+
