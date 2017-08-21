@@ -93,6 +93,44 @@ aside {
     }
 }
 
+.promo {
+    text-align: center;
+    padding-top: rem-calc(50, null);
+
+    .sconto {
+        font-size: rem-calc(55, null);
+        font-weight: 700;
+        color: $rosso-color;
+        line-height: 5rem;
+    }
+
+    h2 {
+        font-weight: 500;
+    }
+
+    .titolo {
+        font-size: rem-calc(60, null);
+        font-style: italic;
+        font-weight: 700;
+        line-height: 5rem;
+        padding-bottom: rem-calc(20, null);
+    }
+
+    .sub-titolo {
+        font-size: rem-calc(40, null);
+        font-style: italic;
+        line-height: 5rem;
+    }
+
+    .big-plus {
+        font-size: rem-calc(200, null);
+        padding-top: rem-calc(300, null);
+        font-weight: 700;
+        color: $rosso-color;
+        line-height: 5rem;
+    }
+}
+
 .banner {
     text-align: center;
     padding-top: rem-calc(50, null);
