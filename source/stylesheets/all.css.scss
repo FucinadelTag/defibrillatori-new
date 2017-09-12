@@ -2,6 +2,8 @@
 @import 'foundation';
 @include foundation-everything (true);
 
+@import 'corner';
+
 $numeroVerde-color: #008a2e !default;
 $evidence-color: #ffed00 !default;
 $button-background-hover: scale-color($evidence-color, $lightness: -15%);
