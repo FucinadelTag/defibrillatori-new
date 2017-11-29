@@ -146,6 +146,13 @@ aside {
         line-height: 5rem;
     }
 
+    .scontoLittle {
+        font-size: rem-calc(50, null);
+        font-weight: 600;
+        color: $rosso-color;
+        line-height: 5rem;
+    }
+
     .subSconto {
         font-size: rem-calc(40, null);
         font-weight: 300;
@@ -477,4 +484,3 @@ div.spazio_bianco {
 .form {
     margin: 10px;
 }
-
