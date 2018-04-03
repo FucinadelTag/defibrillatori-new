@@ -291,6 +291,10 @@ footer {
   font-size: rem-calc(14, null);
 }
 
+.big {
+  font-size: rem-calc(20, null);
+}
+
 .box_nverde {
     text-align: center;
     line-height: 2.1875rem;
@@ -374,6 +378,10 @@ footer {
 
 div.spazio_bianco {
   height: 4.5rem;
+}
+
+div.spazio_bianco_basso {
+  height: 2.5rem;
 }
 
 .custom-counter {
