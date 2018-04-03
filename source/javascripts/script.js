@@ -95,6 +95,6 @@ $.setOptimizelyVariationInForm = function (fieldId, experimentId) {
 }
 
 $.setPageFrom = function (fieldId) {
-    newValue = window.location.href;
+    let newValue = window.location.href;
     $.setFormValue (fieldId, newValue);
 }
