@@ -14,5 +14,12 @@ summary: >
         <%= @abstract %>
 showForm: main
 ---
+<div  class="show-for-small-only">
+<a href="#form">
+    <hr>
+    <img src="/images/banner-mobile-DAE.png" alt="Defibrillatore Philips" />
+    <hr>
+</a>
+</div>
 
 <%= @body %>
