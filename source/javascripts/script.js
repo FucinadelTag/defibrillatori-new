@@ -90,7 +90,6 @@ $.setDeviceInForm = function (fieldId) {
 
 $.setOptimizelyVariationInForm = function (fieldId, experimentId) {
     newValue = optimizely.variationNamesMap[experimentId];
-    console.log (newValue);
     $.setFormValue (fieldId, newValue);
 }
 
