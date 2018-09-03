@@ -10,10 +10,28 @@ conversionCode: >
                         var lastDayOfMonth = moment().endOf('month').format("D\ MMMM YYYY");
                         $(".dataPromo").html(lastDayOfMonth);
                     </script>
-
                     <!-- /MOMENT -->
 
+                    <!-- FASCIA SCONTO -->
+                    <script type="text/javascript">
+                        $(window).scroll(function() {
+                            if ($(this).scrollTop() > 250) { //use `this`, not `document`
+                                $('.corner-ribbon').css({
+                                    'display': 'none'
+                                });
+                            }
+                        });
+                        $(window).scroll(function() {
+                            if ($(this).scrollTop() < 250) { //use `this`, not `document`
+                                $('.corner-ribbon').css({
+                                    'display': 'inline'
+                                });
+                            }
+                        });
+                    </script>
+
 ---
+<div class="corner-ribbon top-right sticky red shadow"><strong>43% di sconto</strong></div>
 <hr>
 <div class="row center">
     <div class="columns">
