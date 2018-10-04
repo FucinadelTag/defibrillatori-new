@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/FucinadelTag/FdtGems
-  revision: 5b0d3d0768b28efc4e6f40121a6419d203f05aae
+  revision: 81c01a380778d485f5d99c477d65e90b51c779e9
   branch: 1.0
   specs:
     fdtCrm_middleman (0.0.1)
@@ -221,5 +221,8 @@ DEPENDENCIES
   tzinfo-data
   wdm (~> 0.1.0)
 
+RUBY VERSION
+   ruby 2.3.0p0
+
 BUNDLED WITH
-   1.11.2
+   1.14.6

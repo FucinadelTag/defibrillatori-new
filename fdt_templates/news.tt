@@ -23,5 +23,7 @@ summary: >
 <%= @body %>
 
 <p>
-    <a href="<%= @fonte %>" target="_blank">Fonte</a>
+    <% if @fonte%>
+        <a href="<%= @fonte %>" target="_blank">Fonte</a>
+    <% end %>
 </p>
