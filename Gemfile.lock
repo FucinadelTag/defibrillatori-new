@@ -170,7 +170,7 @@ GEM
     parallel (1.6.2)
     prismic.io (1.4.0)
       hashery (~> 2.1.1)
-    rack (1.6.4)
+    rack (1.6.13)
     rack-livereload (0.3.16)
       rack
     rack-test (0.6.3)
