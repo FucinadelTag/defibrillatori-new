@@ -163,6 +163,9 @@ GEM
     thor (1.2.1)
     thread_safe (0.3.6)
     tilt (2.0.11)
+    typescript-node (1.6.2)
+      typescript-src (~> 1.6.2)
+    typescript-src (1.6.2.0)
     tzinfo (1.2.11)
       thread_safe (~> 0.1)
     uglifier (3.2.0)
@@ -188,7 +191,8 @@ DEPENDENCIES
   prismic.io
   prismic_middleman!
   rest-client
-  sprockets (~> 4.0)
+  sprockets
+  typescript-node
   tzinfo-data
   wdm (~> 0.1.0)
 

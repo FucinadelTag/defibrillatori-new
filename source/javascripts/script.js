@@ -84,16 +84,16 @@ $.setFormValue = function (fieldId, newValue){
 }
 
 $.setDeviceInForm = function (fieldId) {
-    newValue = $.getDivece ();
+    var newValue = $.getDivece ();
     $.setFormValue (fieldId, newValue);
 }
 
 $.setOptimizelyVariationInForm = function (fieldId, experimentId) {
-    newValue = optimizely.variationNamesMap[experimentId];
+    var newValue = optimizely.variationNamesMap[experimentId];
     $.setFormValue (fieldId, newValue);
 }
 
 $.setPageFrom = function (fieldId) {
-    let newValue = window.location.href;
+    var newValue = window.location.href;
     $.setFormValue (fieldId, newValue);
 }

@@ -21,6 +21,7 @@
 # Add bower's directory to sprockets asset path
 activate :sprockets
 sprockets.append_path File.join(root, "/source/bower_components/foundation-sites/scss/")
+sprockets.append_path File.join(root, "/source/bower_components/foundation-sites/")
 after_configuration do
   @bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
   sprockets.append_path File.join "#{root}", @bower_config["directory"]
@@ -70,6 +71,9 @@ end
 activate :autoprefixer do |config|
   config.browsers = ['last 2 versions', 'ie >= 9', 'and_chr >= 2.3']
 end
+
+ignore /(.*)\.ts/
+ignore '/bower_components/jquery/src/*'
 
 set :css_dir, 'stylesheets'
 
