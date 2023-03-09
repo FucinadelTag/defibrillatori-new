@@ -31,7 +31,7 @@ gem "prismic_middleman", :git => 'https://github.com/FucinadelTag/FdtGems', :bra
 #gem "prismic_middleman", :path => '../FdtGems/'
 
 # PODIO as content repository
-gem 'podio', :git => 'git://github.com/podio/podio-rb'
+gem 'podio', :git => 'https://github.com/podio/podio-rb'
 gem "podio_middleman", :git => 'https://github.com/FucinadelTag/FdtGems', :branch => '1.0'
 #gem "podio_middleman", :path => '../FdtGems/'
 
