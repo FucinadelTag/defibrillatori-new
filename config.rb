@@ -67,6 +67,7 @@ end
 #   end
 # end
 
+
 # Use the correct vendor prefixes for foundation
 activate :autoprefixer do |config|
   config.browsers = ['last 2 versions', 'ie >= 9', 'and_chr >= 2.3']
