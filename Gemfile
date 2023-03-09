@@ -10,7 +10,7 @@ gem "middleman", ">4.0"
 
 gem "json", "2.0.0"
 
-gem 'mini_racer', '0.6.2'
+#gem 'mini_racer', '0.6.2'
 
 gem 'sprockets', '~> 4.0'
 
