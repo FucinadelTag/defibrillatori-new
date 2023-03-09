@@ -2,7 +2,7 @@
 # the following line to use "http://" instead
 source 'https://rubygems.org'
 
-ruby '2.7'
+ruby '>2.7'
 
 gem "therubyracer"
 
