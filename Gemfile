@@ -27,15 +27,15 @@ gem "middleman-livereload", "~> 3.4.3"
 
 # Prismic.io content repository
 gem "prismic.io", require: "prismic"
-gem "prismic_middleman", :git => 'git://github.com/FucinadelTag/FdtGems', :branch => '1.0'
+gem "prismic_middleman", :git => 'https://github.com/FucinadelTag/FdtGems', :branch => '1.0'
 #gem "prismic_middleman", :path => '../FdtGems/'
 
 # PODIO as content repository
 gem 'podio', :git => 'git://github.com/podio/podio-rb'
-gem "podio_middleman", :git => 'git://github.com/FucinadelTag/FdtGems', :branch => '1.0'
+gem "podio_middleman", :git => 'https://github.com/FucinadelTag/FdtGems', :branch => '1.0'
 #gem "podio_middleman", :path => '../FdtGems/'
 
-gem "fdtCrm_middleman", :git => 'git://github.com/FucinadelTag/FdtGems', :branch => '1.0'
+gem "fdtCrm_middleman", :git => 'https://github.com/FucinadelTag/FdtGems', :branch => '1.0'
 #gem "fdtCrm_middleman", :path => '../FdtGems/'
 
 gem "rest-client", :git => 'https://github.com/rest-client/rest-client'
