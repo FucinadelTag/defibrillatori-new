@@ -3,22 +3,24 @@
 ###
 
 # Change Compass configuration
-compass_config do |config|
-  config.add_import_path "bower_components/foundation-sites/scss/"
-  config.output_style = :compact
-
-  # Set this to the root of your project when deployed:
-  config.http_path = "/"
-  config.css_dir = "stylesheets"
-  config.sass_dir = "stylesheets"
-  config.images_dir = "images"
-  config.javascripts_dir = "javascripts"
-end
+# compass_config do |config|
+#   config.add_import_path "bower_components/foundation-sites/scss/"
+#   config.output_style = :compact
+#
+#   # Set this to the root of your project when deployed:
+#   config.http_path = "/"
+#   config.css_dir = "stylesheets"
+#   config.sass_dir = "stylesheets"
+#   config.images_dir = "images"
+#   config.javascripts_dir = "javascripts"
+# end
 
 # Reload the browser automatically whenever files change
 # activate :livereload
 
 # Add bower's directory to sprockets asset path
+activate :sprockets
+sprockets.append_path File.join(root, "/source/bower_components/foundation-sites/scss/")
 after_configuration do
   @bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
   sprockets.append_path File.join "#{root}", @bower_config["directory"]
@@ -102,15 +104,15 @@ activate :fdtCrm_middleman do |f|
   f.fdtCrm_url = 'http://lorenzo.ngrok.io/api/middleman'
 end
 
-activate :podio_middleman do |f|
-  f.podio_api_key = 'runscope'
-  f.podio_api_secret = 'D3FrXAJWyuyNY0A7uA2WYFRvnT9IcweKpTXsdgmRn1Rot5iOZ5XX17KarPUoqJTO'
-  f.podio_app_id = '9325823'
-  f.podio_app_token = '7cf9678005ab4dc7977677d289ec134a'
-  f.podio_views = {'consumabili'=>'22962502'}
-  f.podio_templates = {'consumabili'=>'prodotti'}
-  f.podio_fields_to_get = {'consumabili'=>['Nome Prodotto', 'Prezzo', 'Descrizione', 'Immagine', 'Stato', 'Per il modello', 'Categoria', 'Codice Prodotto Iredeem', 'Prezzo con IVA']}
-end
+# activate :podio_middleman do |f|
+#   f.podio_api_key = 'runscope'
+#   f.podio_api_secret = 'D3FrXAJWyuyNY0A7uA2WYFRvnT9IcweKpTXsdgmRn1Rot5iOZ5XX17KarPUoqJTO'
+#   f.podio_app_id = '9325823'
+#   f.podio_app_token = '7cf9678005ab4dc7977677d289ec134a'
+#   f.podio_views = {'consumabili'=>'22962502'}
+#   f.podio_templates = {'consumabili'=>'prodotti'}
+#   f.podio_fields_to_get = {'consumabili'=>['Nome Prodotto', 'Prezzo', 'Descrizione', 'Immagine', 'Stato', 'Per il modello', 'Categoria', 'Codice Prodotto Iredeem', 'Prezzo con IVA']}
+# end
 
 activate :blog do |blog|
     blog.name = 'blog'
